@@ -1,0 +1,128 @@
+equations:
+- id: eq1
+  origin: source
+  source_kind: md
+  verified: true
+  latex: q_{p0}=\sum_{k\in K_p}m_k,\qquad q_{pr}=q_{p,r-1}-\sum_{k\in K_p:i(k)=i_r}m_k
+    \tag{1}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（1）
+  tag: 1
+- id: eq2
+  origin: source
+  source_kind: md
+  verified: true
+  latex: t_{gij}=\frac{\max(0,H_{ij}-z_i)}{v_g^{up}}+\frac{d_{ij}}{v_g^{cr}}+\frac{\max(0,H_{ij}-z_j)}{v_g^{down}}
+    \tag{2}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（2）
+  tag: 2
+- id: eq3
+  origin: source
+  source_kind: md
+  verified: true
+  latex: L_g(q)=L_g^0-(L_g^0-L_g^F)\left(\frac{q}{Q_g}\right)^{3/2} \tag{3}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（3）
+  tag: 3
+- id: eq4
+  origin: source
+  source_kind: md
+  verified: true
+  latex: E_{gij}(q)=\frac{d_{ij}E_b}{L_g(q)}+\frac{(m_g^0+q)g_0\max(0,H_{ij}-z_i)}{3.6\times10^6\eta_g^{up}}
+    \tag{4}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（4）
+  tag: 4
+- id: eq5
+  origin: source
+  source_kind: md
+  verified: true
+  latex: E_p=\sum_{\ell\in\Gamma_p}E_{g\ell}(q_{p\ell})+\sum_{i\in I_p}\frac{P_{gi}^{handover}\tau_i}{3600}
+    \tag{5}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（5）
+  tag: 5
+- id: eq6
+  origin: source
+  source_kind: md
+  verified: true
+  latex: \sigma_{pb}=1-\frac{E_p}{E_b},\qquad \sigma_{pb}\ge\rho_b \tag{6}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（6）
+  tag: 6
+- id: eq7
+  origin: source
+  source_kind: md
+  verified: true
+  latex: L_p=\max_{i\in I_p}\{\alpha_{ih(i)}-l_{pi}\} \tag{7}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（7）
+  tag: 7
+- id: eq8
+  origin: source
+  source_kind: md
+  verified: true
+  latex: U_p=\min\left\{\min_{i\in I_p}(\beta_{ih(i)}-e_{pi}),\min_{k\in K_p}(D_k-e_{p,i(k)})\right\}
+    \tag{8}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（8）
+  tag: 8
+- id: eq9
+  origin: source
+  source_kind: md
+  verified: true
+  latex: s_p=\max\{L_p,\max(t_0,A_u,A_b,r_p)+\tau_{pre}\},\qquad s_p\le U_p \tag{9}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（9）
+  tag: 9
+  original_latex: s_p=\max\{L_p,\max(A_u,A_b,r_p)+\tau_{pre}\},\qquad s_p\le U_p \tag{9}
+- id: eq10
+  origin: source
+  source_kind: md
+  verified: true
+  latex: t_{bc}^{chg}(\sigma)=T_{bc}^{full}\begin{cases}0.65\dfrac{0.90-\sigma}{0.90}+0.35,&0\le\sigma<0.90,\\0.35\dfrac{1-\sigma}{0.10},&0.90\le\sigma\le1.\end{cases}
+    \tag{10}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（10）
+  tag: 10
+  original_latex: t_b^{chg}(\sigma)=T_b^{full}\begin{cases}0.65\dfrac{0.90-\sigma}{0.90}+0.35,&0\le\sigma<0.90,\\0.35\dfrac{1-\sigma}{0.10},&0.90\le\sigma\le1.\end{cases}
+    \tag{10}
+- id: eq11
+  origin: source
+  source_kind: md
+  verified: true
+  latex: C_{pb}^{start}=\max\{f_p+\delta_b,A_c\} \tag{11}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（11）
+  tag: 11
+- id: eq12
+  origin: source
+  source_kind: md
+  verified: true
+  latex: C_{pb}^{end}=C_{pb}^{start}+t_{bc}^{chg}(\sigma_{pb}) \tag{12}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（12）
+  tag: 12
+  original_latex: C_{pb}^{end}=C_{pb}^{start}+t_b^{chg}(\sigma_{pb}) \tag{12}
+- id: eq13
+  origin: source
+  source_kind: md
+  verified: true
+  latex: J(X)=\bigl(W(X),M(X),E(X),N(X)\bigr) \tag{13}
+  verification_note: 逐式核对来源与量纲；数值见example-results.json。式（9）显式补入批次准备下界t_0；式（10）（12）补入工位下标c；式（13）改为评价向量。
+  source_ref: original/patent-disclosure.md 式（13）
+  tag: 13
+  original_latex: J(X)=\operatorname{lexmin}\bigl(W(X),M(X),E(X),N(X)\bigr) \tag{13}
+omitted: []
+plain_zh: 逐段载荷决定能耗和返航电量，窗口限制起飞时刻，实际充电排队影响电池再次出勤；复算闭环确保输出可执行。
+notes_zh: 式（9）就绪下界和式（13）评价向量根据原稿流程纠错，其余保留原有关系；完整独立代算使用recalculate-example.py，不将受限公式校验器的跳过作为代算通过。
+numeric_example:
+  given:
+    起飞载荷kg: 14
+    电池能量kWh: 4.5
+  compute_zh: 独立按原稿各航段和充电模型代算，输出example-results.json；累计比较及窗口约束另行检查。
+  result:
+    P1能耗kWh: 1.6561133446337557
+    P3起飞s: 1534.5491819084286
+    P3交付s: 1745.73364543952
