@@ -1,0 +1,427 @@
+{
+  "source_split": {
+    "paper": "问题二技术基础",
+    "C103": "本轮用户海事新增设计",
+    "C104": "此前上传港口设计稿",
+    "C105": "人工数据下原型执行"
+  },
+  "evidence_ledger": [
+    {
+      "id": "M01",
+      "feature": "任务、船舶窗口及机体电池工位兼容状态作为输入",
+      "source_ids": [
+        "C103",
+        "C104",
+        "P0195"
+      ],
+      "source_location": "C103；C104；P0195",
+      "support_status": "explicit",
+      "technical_role": "必要/优选技术关系",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M02",
+      "feature": "初始构造与每次任务/访问顺序/机型调整共用同步重排",
+      "source_ids": [
+        "C103",
+        "P0246",
+        "P0232"
+      ],
+      "source_location": "C103；P0246；P0232",
+      "support_status": "explicit",
+      "technical_role": "必要/优选技术关系",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M03",
+      "feature": "卸载后逐段能耗、预计返航SOC重算",
+      "source_ids": [
+        "P0104",
+        "E021",
+        "C103",
+        "C104"
+      ],
+      "source_location": "P0104；E021；C103；C104",
+      "support_status": "explicit",
+      "technical_role": "必要/优选技术关系",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M04",
+      "feature": "交接窗口与硬截止转换为起飞区间并保持多窗口空隙",
+      "source_ids": [
+        "C103",
+        "C104"
+      ],
+      "source_location": "C103；C104",
+      "support_status": "explicit",
+      "technical_role": "必要/优选技术关系",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M05",
+      "feature": "从同一初始资源状态重新建立全候选时间轴",
+      "source_ids": [
+        "C103",
+        "C104",
+        "P0286"
+      ],
+      "source_location": "C103；C104；P0286",
+      "support_status": "inherent",
+      "technical_role": "必要/优选技术关系",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M06",
+      "feature": "冷却/工位占用最大值确定补电开始，补电结束反馈电池再次出勤",
+      "source_ids": [
+        "C103",
+        "C104"
+      ],
+      "source_location": "C103；C104",
+      "support_status": "explicit",
+      "technical_role": "必要/优选技术关系",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M07",
+      "feature": "机体、电池、工位独立兼容分配及占用检查",
+      "source_ids": [
+        "C103",
+        "C104",
+        "P0233"
+      ],
+      "source_location": "C103；C104；P0233",
+      "support_status": "explicit",
+      "technical_role": "必要/优选技术关系",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M08",
+      "feature": "复算最终绑定记录后输出配送/换电/充电预约",
+      "source_ids": [
+        "C103",
+        "C104",
+        "P0425"
+      ],
+      "source_location": "C103；C104；P0425",
+      "support_status": "explicit",
+      "technical_role": "必要/优选技术关系",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M09",
+      "feature": "变化可用合并拆分移动交换改访问次序或机型实现",
+      "source_ids": [
+        "C103",
+        "C014"
+      ],
+      "source_location": "C103；C014",
+      "support_status": "explicit",
+      "technical_role": "必要/优选技术关系",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M10",
+      "feature": "多排程順序/硬约束筛选/软指标判优作为优选实现",
+      "source_ids": [
+        "P0286",
+        "P0233",
+        "C103",
+        "C104"
+      ],
+      "source_location": "P0286；P0233；C103；C104",
+      "support_status": "explicit",
+      "technical_role": "优选技术关系",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M11",
+      "feature": "3/2航程拟合、两段充电、示例交接能耗及周转参数",
+      "source_ids": [
+        "E012",
+        "E022",
+        "C104"
+      ],
+      "source_location": "E012；E022；C104",
+      "support_status": "explicit",
+      "technical_role": "计算实例，不作普遍设备规律",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "M12",
+      "feature": "小规模示例机制检查",
+      "source_ids": [
+        "C105"
+      ],
+      "source_location": "C105",
+      "support_status": "explicit",
+      "technical_role": "验证记录，不替代真实海事试验",
+      "effect": "保持调整方案与资源周转一致"
+    },
+    {
+      "id": "Q01",
+      "feature": "真实船舶窗口、工位功率曲线、冷却及交接耗能的校准",
+      "source_ids": [
+        "C103"
+      ],
+      "source_location": "C103",
+      "support_status": "needs-confirmation",
+      "technical_role": "参数事实待核实",
+      "effect": "不能由模型端点代算推断真实港口效果"
+    }
+  ],
+  "claim_feature_map": [
+    {
+      "claim_number": 1,
+      "feature": "S1输入及兼容状态",
+      "evidence_ids": [
+        "M01"
+      ],
+      "specification_locations": [
+        "S1"
+      ]
+    },
+    {
+      "claim_number": 1,
+      "feature": "S2共用过程检查初始可行性",
+      "evidence_ids": [
+        "M02"
+      ],
+      "specification_locations": [
+        "S2/R"
+      ]
+    },
+    {
+      "claim_number": 1,
+      "feature": "S3货箱访问机型变化后逐段复算",
+      "evidence_ids": [
+        "M02",
+        "M03"
+      ],
+      "specification_locations": [
+        "S3/R1"
+      ]
+    },
+    {
+      "claim_number": 1,
+      "feature": "S3船舶窗口和硬截止转换起飞限制",
+      "evidence_ids": [
+        "M04"
+      ],
+      "specification_locations": [
+        "R1"
+      ]
+    },
+    {
+      "claim_number": 1,
+      "feature": "S3同一输入快照完整机体电池工位重排",
+      "evidence_ids": [
+        "M05",
+        "M07"
+      ],
+      "specification_locations": [
+        "R2—R4"
+      ]
+    },
+    {
+      "claim_number": 1,
+      "feature": "S3冷却工位充电结束反馈后续任务",
+      "evidence_ids": [
+        "M06"
+      ],
+      "specification_locations": [
+        "R3"
+      ]
+    },
+    {
+      "claim_number": 1,
+      "feature": "S3按重排后约束判断调整可执行性",
+      "evidence_ids": [
+        "M07"
+      ],
+      "specification_locations": [
+        "R4"
+      ]
+    },
+    {
+      "claim_number": 1,
+      "feature": "S4独立复算并输出具体绑定与预约",
+      "evidence_ids": [
+        "M08"
+      ],
+      "specification_locations": [
+        "S4"
+      ]
+    },
+    {
+      "claim_number": 2,
+      "feature": "根据权利要求1所述的方法，其特征在于，所述可起飞区间通过以下方式确定：根据访问顺序计算从起飞至各船舶交接开始和完成的偏移，将选定接收窗口起点减去交接开始偏移作为起飞下界，将窗口终点及对应货箱硬截止分别减去交接完成偏移作为起飞上界，对各船舶和各货箱所得约束求交集；多接收窗口时分别计算窗口组合对应的区间，不将相离区间之间的时间视为可起飞时间；在所选窗口内完成该船舶的整个交接过程。",
+      "evidence_ids": [
+        "M04"
+      ],
+      "specification_locations": [
+        "共用过程R及实施例"
+      ]
+    },
+    {
+      "claim_number": 3,
+      "feature": "根据权利要求1所述的方法，其特征在于，起飞载荷由架次内全部不可拆货箱质量之和确定，起飞总体积由全部货箱体积之和确定，每完成一个船舶交付后扣除相应货箱质量，以剩余载荷计算下一航段能耗；将包括返航航段的能耗与交接能耗相加确定架次能耗，结合电池可用能量计算预计返航荷电状态并检查返航储备。",
+      "evidence_ids": [
+        "M03",
+        "M11"
+      ],
+      "specification_locations": [
+        "共用过程R及实施例"
+      ]
+    },
+    {
+      "claim_number": 4,
+      "feature": "根据权利要求1所述的方法，其特征在于，针对候选的实体无人机、电池及工位绑定，在所述可起飞区间内确定起飞时刻，使起飞前准备开始时刻不早于机体可用、电池满电可用及物资备妥时刻；机体返航完成自身周转后释放，电池完成必要补电及周转后释放，各候选绑定使用临时状态计算，未选中的候选绑定不写入当前资源时间轴。",
+      "evidence_ids": [
+        "M05",
+        "M07"
+      ],
+      "specification_locations": [
+        "共用过程R及实施例"
+      ]
+    },
+    {
+      "claim_number": 5,
+      "feature": "根据权利要求1所述的方法，其特征在于，电池预计返航后，以电池拆卸冷却完成时刻和所选兼容充电工位可用时刻中的较晚者作为充电开始时刻，根据预计返航荷电状态和对应电池—工位充电参数计算充电时长，得到充电结束时刻并更新该电池及该工位的下一可用时刻；同一实体工位即使兼容多个电池类型也仅使用一份占用时间轴。",
+      "evidence_ids": [
+        "M06",
+        "M07"
+      ],
+      "specification_locations": [
+        "共用过程R及实施例"
+      ]
+    },
+    {
+      "claim_number": 6,
+      "feature": "根据权利要求1所述的方法，其特征在于，分别记录机体从起飞前准备开始至返航周转结束的占用区间、电池从起飞前准备开始至补电周转完成的占用区间以及工位实际充电区间，同一机体、同一电池和同一工位各自的占用区间互不重叠；前一区间结束时允许后一区间开始。",
+      "evidence_ids": [
+        "M07"
+      ],
+      "specification_locations": [
+        "共用过程R及实施例"
+      ]
+    },
+    {
+      "claim_number": 7,
+      "feature": "根据权利要求1所述的方法，其特征在于，所述调整包括合并配送架次、拆分配送架次、跨架次移动或交换货箱、改变船舶访问顺序以及变更架次机型中的至少一种；每种调整均保持货箱整箱唯一归属，并对调整后的全部待执行架次调用同一个同步资源排程过程，不沿用调整前的起飞时刻、返航电量或充电预约作为调整后的排程。",
+      "evidence_ids": [
+        "M02",
+        "M09"
+      ],
+      "specification_locations": [
+        "共用过程R及实施例"
+      ]
+    },
+    {
+      "claim_number": 8,
+      "feature": "根据权利要求1所述的方法，其特征在于，所述同步资源排程过程对同一候选架次集合采用不同架次排程顺序分别重建时间轴，各排程顺序从相同的资源初始状态独立计算；先筛除违反接收窗口、物资硬截止、承载能力、返航储备及资源占用的完整排程，再对可行排程按加权迟到量、最晚返航时刻、运输能耗和架次数的优先次序比较。",
+      "evidence_ids": [
+        "M10"
+      ],
+      "specification_locations": [
+        "共用过程R及实施例"
+      ]
+    },
+    {
+      "claim_number": 9,
+      "feature": "根据权利要求1所述的方法，其特征在于，所述独立复算以原始任务属性、航段及设备参数为输入，根据最终货箱、访问顺序和具体机体、电池、工位编号重新计算交接开始及完成时刻、预计返航荷电状态、充电起止时刻和资源区间，检查货箱唯一交付、兼容关系、窗口、硬截止、返航储备和同一实体资源区间不重叠；复算未通过的方案不作为可执行配送与充电预约输出。",
+      "evidence_ids": [
+        "M08"
+      ],
+      "specification_locations": [
+        "共用过程R及实施例"
+      ]
+    }
+  ],
+  "formula_inventory": [
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（1）",
+      "technical_role": "逐段卸载载荷",
+      "disposition": "specification-equation-1"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（2）",
+      "technical_role": "航段时间",
+      "disposition": "specification-equation-2"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（3）",
+      "technical_role": "载荷相关航程",
+      "disposition": "specification-equation-3"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（4）",
+      "technical_role": "水平及爬升能耗",
+      "disposition": "specification-equation-4"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（5）",
+      "technical_role": "任务能耗含交接",
+      "disposition": "specification-equation-5"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（6）",
+      "technical_role": "预计返航SOC",
+      "disposition": "specification-equation-6"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（7）",
+      "technical_role": "窗口起飞下界",
+      "disposition": "specification-equation-7"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（8）",
+      "technical_role": "窗口/硬截止起飞上界",
+      "disposition": "specification-equation-8"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（9）",
+      "technical_role": "资源就绪加准备后的起飞时刻",
+      "disposition": "specification-equation-9"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（10）",
+      "technical_role": "电池—工位补电时长",
+      "disposition": "specification-equation-10"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（11）",
+      "technical_role": "冷却与工位排队开始时刻",
+      "disposition": "specification-equation-11"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（12）",
+      "technical_role": "补电结束及后续可用",
+      "disposition": "specification-equation-12"
+    },
+    {
+      "source_id": "C104",
+      "source_number": "港口原稿式（13）",
+      "technical_role": "可行方案优选评价向量",
+      "disposition": "specification-equation-13"
+    }
+  ],
+  "invention_concept": {
+    "technical_problem": "任务局部调整后，船舶窗口及设备能源周转的变化未被完整传播，导致整批配送安排不可执行",
+    "technical_means": "每次变化复算逐段载荷能耗与窗口，从同一快照完整重排机体、电池和有限工位，把充电与排队结束反馈后续架次",
+    "technical_effect": "依据重建后的时限、电量和占用判定该调整是否可执行，形成具体配送换电与充电预约"
+  }
+}

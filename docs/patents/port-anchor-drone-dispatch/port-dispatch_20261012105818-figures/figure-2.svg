@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="915" viewBox="0 0 500 915" role="img" aria-label="图2 初始构造与候选调整共用的排程过程">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="250.0" y="28" text-anchor="middle" font-family="SimSun, Songti SC, serif" font-size="20">图2 初始构造与候选调整共用的排程过程</text>
+<line x1="250.0" y1="187" x2="250.0" y2="277" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="250.0" y1="349" x2="250.0" y2="439" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="250.0" y1="511" x2="250.0" y2="601" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="250.0" y1="673" x2="250.0" y2="763" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="70" y="115" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="151.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">S2初始候选或S3调整候选及同一快照</text>
+<rect x="70" y="277" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="313.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">复算逐段载荷能耗与可起飞区间</text>
+<rect x="70" y="439" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="475.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">分配机体电池并计算具体任务时刻</text>
+<rect x="70" y="601" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="637.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">预约兼容工位并更新电池再次可用</text>
+<rect x="70" y="763" width="360" height="82" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="792.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">检查整批资源与交付约束</text>
+<text x="250.0" y="816.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">返回排程或冲突</text>
+</svg>

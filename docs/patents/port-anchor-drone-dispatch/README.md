@@ -1,5 +1,27 @@
 # 港口锚地无人机协同调度专利稿
 
+
+## 最新聚焦版：2026年10月12日
+
+本轮以“每次调整任务或访问顺序，都完整重排周转时间轴并判断可执行性”为主线，将船舶窗口及有限工位作为海事新增设计单独说明。
+
+- [完整Word审阅稿](port-dispatch_20261012105818.docx)及[Markdown正文](port-dispatch_20261012105818.md)。
+- [权利要求书](port-dispatch_20261012105818-claims.docx)及[说明书](port-dispatch_20261012105818-specification.docx)。
+- [本轮修改、来源边界及验证说明](port-dispatch_20261012105818-revision-notes.md)。
+- [机制检查结果](port-dispatch_20261012105818-checks.json)及[可重复原型](port-dispatch_20261012105818-scheduler.py)。
+- [来源与权项映射](port-dispatch_20261012105818-evidence.json)、[结构化稿](port-dispatch_20261012105818-draft.json)、[检查报告](port-dispatch_20261012105818-validation.txt)。
+- [海事扩展查新状态](port-dispatch_20261012105818-prior-art-status.md)。
+
+说明书为9项方法权利要求的对应技术披露，包含13个可编辑公式和3张中文黑白附图。人工5船小例验证三个机制以及41个邻域候选的完整重排；这不等于已完成真实港口仿真、实飞或新颖性判断。原论文山区结果与本轮海事新增设计没有混用。
+
+从仓库根目录重复示例检查：
+
+```bash
+python3 docs/patents/port-anchor-drone-dispatch/port-dispatch_20261012105818-scheduler.py --output /tmp/port-mechanism-checks.json
+```
+
+## 此前版本（保留）
+
 本目录保存港口锚地应急物资配送的异构无人机与共享电池协同调度专利修订稿。
 
 - [Word 修订稿](patent-disclosure.docx)：依据 Markdown 于2026年10月12日重新生成，包含3张附图、13个可编辑公式和4张表格。
