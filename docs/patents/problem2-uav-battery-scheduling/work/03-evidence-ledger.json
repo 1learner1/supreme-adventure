@@ -1,0 +1,321 @@
+[
+  {
+    "id": "B01",
+    "feature": "获取货箱目的服务点、质量、体积、期望交付时刻和硬截止，获取机型能力、实体机及同型电池库存",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0195",
+      "P0202",
+      "P0207",
+      "C003",
+      "C004",
+      "P0083"
+    ],
+    "technical_role": "输入/约束",
+    "effect": "把任务、物理能力和可用设备置于统一输入",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0195；P0202；P0207；C003；C004；P0083"
+  },
+  {
+    "id": "B02",
+    "feature": "按货箱分组与机型构造候选架次；改变组批或机型产生新候选",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0197",
+      "P0241",
+      "P0284",
+      "P0287",
+      "C014"
+    ],
+    "technical_role": "候选生成",
+    "effect": "调整货箱归属与机型组合",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0197；P0241；P0284；P0287；C014"
+  },
+  {
+    "id": "B03",
+    "feature": "枚举多服务点访问顺序，交付后更新逐航段剩余载荷，计算航时、能耗和返航SOC",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0104",
+      "P0215",
+      "P0216",
+      "P0232",
+      "P0290",
+      "E011",
+      "E012",
+      "E016",
+      "E093"
+    ],
+    "technical_role": "物理复算",
+    "effect": "使同一路线载荷变化影响返航电量和周转",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0104；P0215；P0216；P0232；P0290；E011；E012；E016；E093"
+  },
+  {
+    "id": "B04",
+    "feature": "对同一候选以多个架次排程优先顺序分别重建完整机体及电池时间轴",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0286",
+      "P0290",
+      "P0291"
+    ],
+    "technical_role": "资源排程",
+    "effect": "将排程顺序作为候选评价自由度",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0286；P0290；P0291"
+  },
+  {
+    "id": "B05",
+    "feature": "为各次优先顺序采用同一库存及初始可用状态的独立副本",
+    "support_status": "inherent",
+    "source_ids": [
+      "P0286",
+      "P0291",
+      "P0232"
+    ],
+    "technical_role": "候选隔离",
+    "effect": "不同排程顺序彼此不继承临时占用；同一候选比较保持相同输入条件",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0286；P0291；P0232"
+  },
+  {
+    "id": "B06",
+    "feature": "选择同型实体机与共享电池，返航后按SOC计算满电所需充电时间，将结束时刻限制下一次电池使用",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0074",
+      "P0108",
+      "P0110",
+      "P0112",
+      "P0222",
+      "E021",
+      "E022",
+      "E096"
+    ],
+    "technical_role": "能源周转",
+    "effect": "机体与电池分离复用，防止未完成充电电池再次出勤",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0074；P0108；P0110；P0112；P0222；E021；E022；E096"
+  },
+  {
+    "id": "B07",
+    "feature": "先检查唯一交付、容量、返航余量、硬截止、库存与资源占用，再比较加权迟到/完成时刻/能耗/架次数",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0198",
+      "P0207",
+      "P0233",
+      "E067",
+      "E068",
+      "E069",
+      "E094",
+      "E095"
+    ],
+    "technical_role": "可行性/判优",
+    "effect": "避免软目标抵消硬约束违约",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0198；P0207；P0233；E067；E068；E069；E094；E095"
+  },
+  {
+    "id": "B08",
+    "feature": "搜索阶段用辅助标量控制状态转移，候选保存和最终选择采用词典序，候选是否存储不只由是否接受决定",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0228",
+      "P0230",
+      "P0311",
+      "C100",
+      "C101"
+    ],
+    "technical_role": "搜索/档案",
+    "effect": "保持搜索探索准则与最终判优规则分离",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0228；P0230；P0311；C100；C101"
+  },
+  {
+    "id": "B09",
+    "feature": "从最终记录独立复算逐箱交付与资源区间，生成带具体无人机电池绑定的运输排程",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0198",
+      "P0233",
+      "P0325",
+      "P0424",
+      "P0425"
+    ],
+    "technical_role": "输出复核",
+    "effect": "防止求解器可行标签代替独立检查",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0198；P0233；P0325；P0424；P0425"
+  },
+  {
+    "id": "B10",
+    "feature": "按DEM采样最大有效地形高程及净空高度构造巡航海拔，区分巡航与起降阶段检查",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0070",
+      "P0071",
+      "P0087",
+      "P0090",
+      "P0091",
+      "P0092",
+      "E003"
+    ],
+    "technical_role": "航段前处理",
+    "effect": "使输入航时及能耗对应可验证航段",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0070；P0071；P0087；P0090；P0091；P0092；E003"
+  },
+  {
+    "id": "B11",
+    "feature": "货箱分配唯一且整箱承运；总质量容积按整架次计算，交付后载荷下降",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0209",
+      "P0211",
+      "P0213",
+      "P0216",
+      "E077",
+      "E078",
+      "E084"
+    ],
+    "technical_role": "容量",
+    "effect": "避免按单服务区计算而遗漏多点起飞总载荷",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0209；P0211；P0213；P0216；E077；E078；E084"
+  },
+  {
+    "id": "B12",
+    "feature": "两阶段充电关系0至90%占65%，90至100%占35%；初始满电；不同电池可并行充电",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0074",
+      "P0110",
+      "P0112",
+      "E022"
+    ],
+    "technical_role": "优选电池模型",
+    "effect": "给出SOC到满电时间的确定计算方式",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0074；P0110；P0112；E022"
+  },
+  {
+    "id": "B13",
+    "feature": "MCH逐对合并后整体重排；迟到量不超过原方案1.02倍是早期接纳条件",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0244",
+      "P0245",
+      "P0246",
+      "P0333"
+    ],
+    "technical_role": "优选合并",
+    "effect": "资源重排作为合并可行性判据",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0244；P0245；P0246；P0333"
+  },
+  {
+    "id": "B14",
+    "feature": "Merge/Split/Move/Swap/ChangeType五类邻域，架次数上限作为配置限制",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0285",
+      "P0287",
+      "P0288",
+      "P0290",
+      "C014",
+      "C100"
+    ],
+    "technical_role": "优选搜索",
+    "effect": "调整货箱归属、数量与机型",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0285；P0287；P0288；P0290；C014；C100"
+  },
+  {
+    "id": "B15",
+    "feature": "退火温度、降温、预算和多起点设置，有限评价后以词典序挑选档案",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0293",
+      "P0311",
+      "C100",
+      "C101"
+    ],
+    "technical_role": "优选搜索终止",
+    "effect": "提供可执行的有限搜索流程",
+    "proposed_destination": "formal-claims/specification",
+    "source_location": "P0293；P0311；C100；C101"
+  },
+  {
+    "id": "B16",
+    "feature": "23架次零迟到6929.381秒66.276kWh仅为论文指定实例下报告结果",
+    "support_status": "explicit",
+    "source_ids": [
+      "P0311",
+      "P0315",
+      "P0323",
+      "C018",
+      "C020"
+    ],
+    "technical_role": "验证实例",
+    "effect": "支持该实例下取得可行结果，不证明全局最优",
+    "proposed_destination": "embodiment",
+    "source_location": "P0311；P0315；P0323；C018；C020"
+  },
+  {
+    "id": "X01",
+    "feature": "船舶接收窗口与港口坐标",
+    "support_status": "unsupported",
+    "source_ids": [],
+    "technical_role": "排除",
+    "effect": "问题二无该输入或转换关系",
+    "proposed_destination": "review-appendix",
+    "source_location": "未获来源支持，已排除"
+  },
+  {
+    "id": "X02",
+    "feature": "有限充电工位排队与工位独立绑定",
+    "support_status": "unsupported",
+    "source_ids": [],
+    "technical_role": "排除",
+    "effect": "原文并行充电且9.2说明未考虑排队",
+    "proposed_destination": "review-appendix",
+    "source_location": "未获来源支持，已排除"
+  },
+  {
+    "id": "X03",
+    "feature": "运输无人机60秒准备/周转与滚动状态更新",
+    "support_status": "unsupported",
+    "source_ids": [],
+    "technical_role": "排除",
+    "effect": "原文运输占用为[s_p,f_p)；中继参数不移植",
+    "proposed_destination": "review-appendix",
+    "source_location": "未获来源支持，已排除"
+  },
+  {
+    "id": "X04",
+    "feature": "任何场景、模型和设备均必然零迟到或全局最优",
+    "support_status": "unsupported",
+    "source_ids": [],
+    "technical_role": "排除",
+    "effect": "原文启发式及建模边界不支持",
+    "proposed_destination": "review-appendix",
+    "source_location": "未获来源支持，已排除"
+  },
+  {
+    "id": "Q01",
+    "feature": "完整DEM/货箱数据、最终23架次工作簿和完整评价器实现",
+    "support_status": "needs-confirmation",
+    "source_ids": [
+      "P0456",
+      "C100",
+      "C101"
+    ],
+    "technical_role": "审阅问题",
+    "effect": "目前上传文档未提供外部附件，不声称完成全实例复现",
+    "proposed_destination": "review-appendix",
+    "source_location": "P0456；C100；C101"
+  }
+]

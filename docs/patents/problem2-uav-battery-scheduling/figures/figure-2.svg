@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="905" viewBox="0 0 500 905" role="img" aria-label="图2 载荷与电池周转依赖示意图">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="250.0" y="28" text-anchor="middle" font-family="SimSun, Songti SC, serif" font-size="20">图2 载荷与电池周转依赖示意图</text>
+<line x1="250.0" y1="187" x2="250.0" y2="277" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="250.0" y1="349" x2="250.0" y2="439" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="250.0" y1="511" x2="250.0" y2="601" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="250.0" y1="673" x2="250.0" y2="763" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="70" y="115" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="151.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">货箱集合及服务点访问顺序</text>
+<rect x="70" y="277" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="313.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">逐航段卸载后剩余载荷</text>
+<rect x="70" y="439" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="475.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">架次能耗与预计返航荷电状态</text>
+<rect x="70" y="601" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="637.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">预计充满时刻及电池下一可用状态</text>
+<rect x="70" y="763" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="799.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">后续架次的开始时刻及资源占用</text>
+</svg>

@@ -1,0 +1,36 @@
+{
+  "source_files": [
+    {
+      "file_name": "D26101510024(1).docx",
+      "sha256": "4fc7d4e62a9cf44c88b40a4cd3c3b9d8ca67f6ae7db41289b621bf00e411f567",
+      "scope": "第六章问题二、4.1—4.4共用物理资源规则、9.1相关检验及附录3问题二代码节选"
+    }
+  ],
+  "source_format": "mixed-project (Word论文含OMML、图表及代码节选)",
+  "task_mode": "full-draft",
+  "invention_type": "algorithm-software",
+  "target": "中国发明专利",
+  "publication_status": "用户确认未发表，为本团队建模比赛成果；比赛提交/展示可访问范围及日期未确认",
+  "known_disclosure_dates": [],
+  "inventorship": "未确认",
+  "ownership": "未确认",
+  "requested_deliverables": [
+    "权利要求书",
+    "说明书",
+    "说明书摘要",
+    "摘要附图",
+    "完整审阅稿",
+    "Markdown",
+    "证据溯源与校验报告"
+  ],
+  "prior_draft_status": "港口稿只作错误迁移检查，不作为本次技术特征来源",
+  "scope_exclusions": [
+    "船舶接收窗口",
+    "有限充电工位排队",
+    "通信中继及链路连续性",
+    "任务分区",
+    "固定竞赛规模作为独立权项条件",
+    "未来源支持的飞控指令下发/滚动重调度"
+  ],
+  "created_at": "2026-10-12T10:14:24.321083+08:00"
+}

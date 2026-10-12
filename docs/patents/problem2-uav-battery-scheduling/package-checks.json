@@ -1,0 +1,64 @@
+{
+  "package_files": [
+    {
+      "part": "权利要求书",
+      "editable_formulas": 0,
+      "embedded_figures": 0,
+      "bytes": 39954,
+      "status": "passed"
+    },
+    {
+      "part": "说明书",
+      "editable_formulas": 18,
+      "embedded_figures": 3,
+      "bytes": 289644,
+      "status": "passed"
+    },
+    {
+      "part": "说明书摘要",
+      "editable_formulas": 0,
+      "embedded_figures": 1,
+      "bytes": 124084,
+      "status": "passed"
+    },
+    {
+      "part": "摘要附图",
+      "editable_formulas": 0,
+      "embedded_figures": 1,
+      "bytes": 123531,
+      "status": "passed"
+    },
+    {
+      "part": "完整审阅稿",
+      "editable_formulas": 18,
+      "embedded_figures": 4,
+      "bytes": 295034,
+      "status": "passed"
+    }
+  ],
+  "per_claim_evidence_check": "passed: explicit/inherent only",
+  "main_figure_step_coverage": "passed S1-S6",
+  "arithmetic_checks": {
+    "A": {
+      "safe_energy_kwh": 3.6,
+      "charge_at_soc_20_seconds": 1540.0,
+      "charge_at_soc_90_seconds": 629.9999999999998
+    },
+    "B": {
+      "safe_energy_kwh": 3.2,
+      "charge_at_soc_20_seconds": 2053.333333333333,
+      "charge_at_soc_90_seconds": 839.9999999999998
+    },
+    "C": {
+      "safe_energy_kwh": 6.4,
+      "charge_at_soc_20_seconds": 2566.6666666666665,
+      "charge_at_soc_90_seconds": 1049.9999999999995
+    }
+  },
+  "experiment_reproduction": "not run: raw instance inputs and complete evaluator modules absent",
+  "source_result_scope": "MCH experiment and later SA results separated; C102 user clarification applied",
+  "limitations": [
+    "Native checks establish file integrity and internal mappings, not patentability.",
+    "Full 80-box numerical optimization has not been reproduced."
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "terminology_ledger": [
+    {
+      "concept": "配送货箱",
+      "canonical_zh": "配送货箱",
+      "source_terms": [
+        "货箱",
+        "不可拆货箱"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "服务点",
+      "canonical_zh": "服务点",
+      "source_terms": [
+        "服务区",
+        "接收点"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "运输架次",
+      "canonical_zh": "运输架次",
+      "source_terms": [
+        "架次",
+        "运输任务"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "机型",
+      "canonical_zh": "机型",
+      "source_terms": [
+        "g",
+        "运输机型"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "实体无人机",
+      "canonical_zh": "实体无人机",
+      "source_terms": [
+        "实体运输无人机",
+        "执行无人机"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "共享电池",
+      "canonical_zh": "共享电池",
+      "source_terms": [
+        "同型共享电池",
+        "电池"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "架次排程顺序",
+      "canonical_zh": "架次排程顺序",
+      "source_terms": [
+        "起飞优先顺序",
+        "排程顺序"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "服务点访问顺序",
+      "canonical_zh": "服务点访问顺序",
+      "source_terms": [
+        "访问顺序",
+        "πp"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "加权迟到量",
+      "canonical_zh": "加权迟到量",
+      "source_terms": [
+        "WTard"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "运输完成时刻",
+      "canonical_zh": "运输完成时刻",
+      "source_terms": [
+        "Makespan",
+        "全部任务完成时刻"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "运输总能耗",
+      "canonical_zh": "运输总能耗",
+      "source_terms": [
+        "ETotal",
+        "Energy"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "可行方案档案",
+      "canonical_zh": "可行方案档案",
+      "source_terms": [
+        "档案集",
+        "best"
+      ],
+      "forbidden_aliases": []
+    },
+    {
+      "concept": "荷电状态",
+      "canonical_zh": "荷电状态",
+      "source_terms": [
+        "SOC"
+      ],
+      "forbidden_aliases": []
+    }
+  ],
+  "input_operation_output": [
+    {
+      "operation": "形成货箱组批与机型候选",
+      "input": [
+        "配送货箱属性",
+        "设备能力"
+      ],
+      "output": [
+        "架次货箱集合",
+        "候选机型"
+      ]
+    },
+    {
+      "operation": "逐航段复算",
+      "input": [
+        "访问排列",
+        "剩余载荷",
+        "地形航段",
+        "机型参数"
+      ],
+      "output": [
+        "航时",
+        "任务能耗",
+        "预计返航SOC"
+      ]
+    },
+    {
+      "operation": "多顺序资源排程",
+      "input": [
+        "候选架次",
+        "机体/电池库存",
+        "满电可用时刻"
+      ],
+      "output": [
+        "设备绑定",
+        "逐箱交付时刻",
+        "机体及电池时间轴"
+      ]
+    },
+    {
+      "operation": "评价与搜索",
+      "input": [
+        "硬约束判定",
+        "评价向量",
+        "有限预算"
+      ],
+      "output": [
+        "可行方案档案"
+      ]
+    },
+    {
+      "operation": "独立检查",
+      "input": [
+        "最终架次/绑定/交付/资源区间"
+      ],
+      "output": [
+        "复核后的运输排程"
+      ]
+    }
+  ],
+  "core_formula_sources": [
+    "E003",
+    "E011",
+    "E012",
+    "E014",
+    "E015",
+    "E016",
+    "E019",
+    "E021",
+    "E022",
+    "E067",
+    "E068",
+    "E077",
+    "E078",
+    "E084",
+    "E093",
+    "E094",
+    "E095",
+    "E096",
+    "E097",
+    "E098"
+  ],
+  "implementation_gaps": [
+    "原始货箱/DEM附件与完整模块不可用，仅可核实文本、公式、参数关系及汇总结果",
+    "来源式26按K_i书写，正文要求整架次容量；新稿用K_p整体求和，留痕说明",
+    "来源式32未显式包含最后接收点交接时长，正文定义送达为交接结束；新稿依文字做开始/完成时间递推，需核对最终工作簿时刻口径",
+    "源码早期4邻域与正文后期5邻域是不同阶段；不合并成同一已复现算法轨迹",
+    "同一资源无重叠及满电复用有依据；充电设施数量、准备周转额外耗时、通信连续性不可从问题二补写"
+  ]
+}

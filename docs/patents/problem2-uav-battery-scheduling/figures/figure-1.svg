@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="1077" viewBox="0 0 500 1077" role="img" aria-label="图1 协同调度方法流程图">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="250.0" y="28" text-anchor="middle" font-family="SimSun, Songti SC, serif" font-size="20">图1 协同调度方法流程图</text>
+<line x1="250.0" y1="187" x2="250.0" y2="277" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="250.0" y1="349" x2="250.0" y2="439" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="250.0" y1="521" x2="250.0" y2="611" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="250.0" y1="683" x2="250.0" y2="773" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="250.0" y1="845" x2="250.0" y2="935" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="70" y="115" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="151.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">S1 获取货箱 航段和设备状态</text>
+<rect x="70" y="277" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="313.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">S2 构造并更新架次货箱集合与机型</text>
+<rect x="70" y="439" width="360" height="82" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="468.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">S3 枚举访问顺序</text>
+<text x="250.0" y="492.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">复算载荷航时和电量</text>
+<rect x="70" y="611" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="647.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">S4 多顺序重建机体及电池时间轴</text>
+<rect x="70" y="773" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="809.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">S5 硬约束筛选 判优并维护可行档案</text>
+<rect x="70" y="935" width="360" height="72" rx="0" fill="#fff" stroke="#000" stroke-width="2"/>
+<text x="250.0" y="971.0" text-anchor="middle" dominant-baseline="middle" font-family="SimSun, Songti SC, serif" font-size="18">S6 独立复算并输出设备绑定运输排程</text>
+</svg>

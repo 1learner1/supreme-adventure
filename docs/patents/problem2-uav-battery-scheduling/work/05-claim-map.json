@@ -1,0 +1,197 @@
+[
+  {
+    "claim_number": 1,
+    "feature": "S1货箱、航段、机型与实体资源输入",
+    "evidence_ids": [
+      "B01",
+      "B10"
+    ],
+    "specification_locations": [
+      "实施例一S1"
+    ]
+  },
+  {
+    "claim_number": 1,
+    "feature": "S2分配货箱与机型并改变分组或机型形成候选",
+    "evidence_ids": [
+      "B02",
+      "B14"
+    ],
+    "specification_locations": [
+      "实施例一S2"
+    ]
+  },
+  {
+    "claim_number": 1,
+    "feature": "S3访问顺序枚举、逐段卸载能耗与返航电量复算",
+    "evidence_ids": [
+      "B03",
+      "B11"
+    ],
+    "specification_locations": [
+      "实施例一S3；式（2）至（8）"
+    ]
+  },
+  {
+    "claim_number": 1,
+    "feature": "S4多顺序独立资源状态下机体/电池绑定与时间轴",
+    "evidence_ids": [
+      "B04",
+      "B05",
+      "B06"
+    ],
+    "specification_locations": [
+      "实施例一S4；式（9）至（12）"
+    ]
+  },
+  {
+    "claim_number": 1,
+    "feature": "S4返航SOC到满电充电结束反馈后续架次开始",
+    "evidence_ids": [
+      "B06",
+      "B12"
+    ],
+    "specification_locations": [
+      "实施例一S4"
+    ]
+  },
+  {
+    "claim_number": 1,
+    "feature": "S5硬约束先筛选、四指标优先比较和有限搜索档案",
+    "evidence_ids": [
+      "B07",
+      "B08",
+      "B15"
+    ],
+    "specification_locations": [
+      "实施例一S5；式（14）至（16）"
+    ]
+  },
+  {
+    "claim_number": 1,
+    "feature": "S6独立输出记录复算并输出绑定的运输排程",
+    "evidence_ids": [
+      "B09"
+    ],
+    "specification_locations": [
+      "实施例一S6"
+    ]
+  },
+  {
+    "claim_number": 2,
+    "feature": "DEM最大有效高程、阶段航时及有效性检查",
+    "evidence_ids": [
+      "B10"
+    ],
+    "specification_locations": [
+      "实施例一",
+      "公式及符号说明"
+    ]
+  },
+  {
+    "claim_number": 3,
+    "feature": "全架次容量、逐次卸载及巡航/爬升能耗",
+    "evidence_ids": [
+      "B03",
+      "B11"
+    ],
+    "specification_locations": [
+      "实施例一",
+      "公式及符号说明"
+    ]
+  },
+  {
+    "claim_number": 4,
+    "feature": "三种排程顺序和独立资源副本",
+    "evidence_ids": [
+      "B04",
+      "B05"
+    ],
+    "specification_locations": [
+      "实施例一",
+      "公式及符号说明"
+    ]
+  },
+  {
+    "claim_number": 5,
+    "feature": "迟到定义、最晚返航及逐级优先比较",
+    "evidence_ids": [
+      "B07"
+    ],
+    "specification_locations": [
+      "实施例一",
+      "公式及符号说明"
+    ]
+  },
+  {
+    "claim_number": 6,
+    "feature": "满电复用、两段SOC充电与半开区间",
+    "evidence_ids": [
+      "B06",
+      "B12"
+    ],
+    "specification_locations": [
+      "实施例一",
+      "公式及符号说明"
+    ]
+  },
+  {
+    "claim_number": 7,
+    "feature": "整批资源重排与1.02迟到比值合并筛选",
+    "evidence_ids": [
+      "B13"
+    ],
+    "specification_locations": [
+      "实施例一",
+      "实施例二"
+    ]
+  },
+  {
+    "claim_number": 8,
+    "feature": "五类邻域、变更机型对应设备池与架次数上限",
+    "evidence_ids": [
+      "B14"
+    ],
+    "specification_locations": [
+      "实施例一",
+      "实施例二"
+    ]
+  },
+  {
+    "claim_number": 9,
+    "feature": "退火辅助标量、降温、档案与当前状态分离",
+    "evidence_ids": [
+      "B08",
+      "B15"
+    ],
+    "specification_locations": [
+      "实施例一",
+      "实施例二"
+    ]
+  },
+  {
+    "claim_number": 9,
+    "feature": "有限搜索预算/无候选停止",
+    "evidence_ids": [
+      "B15"
+    ],
+    "specification_locations": [
+      "实施例一",
+      "实施例二"
+    ]
+  },
+  {
+    "claim_number": 10,
+    "feature": "从输出记录独立复算所有物理和资源约束",
+    "evidence_ids": [
+      "B09",
+      "B10",
+      "B11",
+      "B06"
+    ],
+    "specification_locations": [
+      "实施例一",
+      "公式及符号说明"
+    ]
+  }
+]
