@@ -1,0 +1,142 @@
+[
+  {
+    "id": "P0104",
+    "type": "paper-text",
+    "locator": "D26101510024(1).docx 正文段落104",
+    "summary": "式(5)中为该航段的剩余载荷而非起飞总载荷，这是多点架次能耗容易被高估或低估的关键：每完成一个服务区的投送，后续航段的 q 应相应减少。本文在实现中对每个航段交付后立即更新剩余载荷再计算下一段能耗。爬升能耗效率  直接取附件字段值 0.72，不作为自由假设；由于题目未给出水平能耗的显式系数，式(3)属于建模补全，相关绝对数值依赖该解释；未对替代的水平能耗标定重新求解，其适用边界见 9.1 节。",
+    "text": "式(5)中为该航段的剩余载荷而非起飞总载荷，这是多点架次能耗容易被高估或低估的关键：每完成一个服务区的投送，后续航段的 q 应相应减少。本文在实现中对每个航段交付后立即更新剩余载荷再计算下一段能耗。爬升能耗效率  直接取附件字段值 0.72，不作为自由假设；由于题目未给出水平能耗的显式系数，式(3)属于建模补全，相关绝对数值依赖该解释；未对替代的水平能耗标定重新求解，其适用边界见 9.1 节。",
+    "confidence": "high",
+    "style": "Normal",
+    "selected_for_problem2": true
+  },
+  {
+    "id": "P0195",
+    "type": "paper-text",
+    "locator": "D26101510024(1).docx 正文段落195",
+    "summary": "问题二在问题一“单服务区、单架次直接往返”的基础上，进一步允许同一架次依次访问多个服务区，并引入实体运输无人机、共享电池及充电周转约束。因此，其决策变量不再仅包括货箱组批，还需要同时确定服务区访问顺序、运输机型、执行无人机、共享电池以及各架次的起止时刻。",
+    "text": "问题二在问题一“单服务区、单架次直接往返”的基础上，进一步允许同一架次依次访问多个服务区，并引入实体运输无人机、共享电池及充电周转约束。因此，其决策变量不再仅包括货箱组批，还需要同时确定服务区访问顺序、运输机型、执行无人机、共享电池以及各架次的起止时刻。",
+    "confidence": "high",
+    "style": "Normal",
+    "selected_for_problem2": true
+  },
+  {
+    "id": "P0232",
+    "type": "paper-text",
+    "locator": "D26101510024(1).docx 正文段落232",
+    "summary": "候选解的统一评价链。候选解首先规定每箱所属架次、架次机型与服务区访问顺序。评价器按访问顺序逐段更新剩余载荷，重算飞行时间、能耗与返航 SOC；随后在给定库存内分配实体无人机与同型共享电池，递推起飞、返航及两阶段充电结束时刻，得到逐箱交接完成时间。这样，一个局部邻域操作即使只移动一箱，也会重新计算受影响的完整资源时间轴，而非沿用操作前的起飞时刻。",
+    "text": "候选解的统一评价链。候选解首先规定每箱所属架次、架次机型与服务区访问顺序。评价器按访问顺序逐段更新剩余载荷，重算飞行时间、能耗与返航 SOC；随后在给定库存内分配实体无人机与同型共享电池，递推起飞、返航及两阶段充电结束时刻，得到逐箱交接完成时间。这样，一个局部邻域操作即使只移动一箱，也会重新计算受影响的完整资源时间轴，而非沿用操作前的起飞时刻。",
+    "confidence": "high",
+    "style": "Normal",
+    "selected_for_problem2": true
+  },
+  {
+    "id": "P0233",
+    "type": "paper-text",
+    "locator": "D26101510024(1).docx 正文段落233",
+    "summary": "可行性与排序分开处理。货箱唯一交付、首批保障箱和医疗物资硬截止、载重与体积、地形净空、返航电量、实体机和电池占用及库存上限必须先全部通过；未通过的候选不进入最终指标排序。可行候选才计算加权迟到、完成时刻、运输能耗和架次数。模拟退火内部的标量化数值仅决定搜索过程的接受概率，档案解和章节结论仍以式(23)的词典序判优。独立验证器从最终输出的逐箱交付与资源区间重新复算，不以求解器自身的“可行”标签代替检查。",
+    "text": "可行性与排序分开处理。货箱唯一交付、首批保障箱和医疗物资硬截止、载重与体积、地形净空、返航电量、实体机和电池占用及库存上限必须先全部通过；未通过的候选不进入最终指标排序。可行候选才计算加权迟到、完成时刻、运输能耗和架次数。模拟退火内部的标量化数值仅决定搜索过程的接受概率，档案解和章节结论仍以式(23)的词典序判优。独立验证器从最终输出的逐箱交付与资源区间重新复算，不以求解器自身的“可行”标签代替检查。",
+    "confidence": "high",
+    "style": "Normal",
+    "selected_for_problem2": true
+  },
+  {
+    "id": "P0246",
+    "type": "paper-text",
+    "locator": "D26101510024(1).docx 正文段落246",
+    "summary": "算法的关键设计是把资源重排作为合并判据的一部分，而不是先合并再修补。原因在于式(28)–(31）的耦合很强：一次合并会改变受影响架次的开始时刻，进而改变其所用电池的充电窗口，可能使原本可行的后续架次变得不可行。只有整体重排才能判断该合并是否真正可行。",
+    "text": "算法的关键设计是把资源重排作为合并判据的一部分，而不是先合并再修补。原因在于式(28)–(31）的耦合很强：一次合并会改变受影响架次的开始时刻，进而改变其所用电池的充电窗口，可能使原本可行的后续架次变得不可行。只有整体重排才能判断该合并是否真正可行。",
+    "confidence": "high",
+    "style": "Normal",
+    "selected_for_problem2": true
+  },
+  {
+    "id": "P0286",
+    "type": "paper-text",
+    "locator": "D26101510024(1).docx 正文段落286",
+    "summary": "其一，评价器内部的资源排程不再只按单一优先级顺序执行：对同一候选分组，分别按“期望送达时间优先”“硬截止时间优先”“远距航段优先”三种顺序重建整条资源时间轴（起飞时刻、实体无人机、共享电池与充电周转），取按式(23)词典序最优的一次作为该候选解的评价结果。",
+    "text": "其一，评价器内部的资源排程不再只按单一优先级顺序执行：对同一候选分组，分别按“期望送达时间优先”“硬截止时间优先”“远距航段优先”三种顺序重建整条资源时间轴（起飞时刻、实体无人机、共享电池与充电周转），取按式(23)词典序最优的一次作为该候选解的评价结果。",
+    "confidence": "high",
+    "style": "Normal",
+    "selected_for_problem2": true
+  },
+  {
+    "id": "P0425",
+    "type": "paper-text",
+    "locator": "D26101510024(1).docx 正文段落425",
+    "summary": "检验按“模型—求解—审计”三层分离的原则组织：模型层给出物理与资源规则，求解层只负责在候选空间中搜索，审计层不读取求解器的任何覆盖标签，而是从输出排程反向重建轨迹并重新判定全部硬约束。这种分离使“方案可行”由独立重算而非求解器的自述决定，也便于定位不一致发生在哪一层。",
+    "text": "检验按“模型—求解—审计”三层分离的原则组织：模型层给出物理与资源规则，求解层只负责在候选空间中搜索，审计层不读取求解器的任何覆盖标签，而是从输出排程反向重建轨迹并重新判定全部硬约束。这种分离使“方案可行”由独立重算而非求解器的自述决定，也便于定位不一致发生在哪一层。",
+    "confidence": "high",
+    "style": "Normal",
+    "selected_for_problem2": true
+  },
+  {
+    "id": "C014",
+    "type": "source-table",
+    "locator": "D26101510024(1).docx 表格14，位于P0289之后",
+    "summary": "算子 | 含义 | 作用",
+    "rows": [
+      [
+        "算子",
+        "含义",
+        "作用"
+      ],
+      [
+        "Merge",
+        "将两个架次合并为一个",
+        "减少架次、提高单架次装载率"
+      ],
+      [
+        "Split",
+        "将一个架次拆分为两个",
+        "打散拥挤架次、提升并行度"
+      ],
+      [
+        "Move",
+        "把一个货箱从一个架次迁移到另一个架次",
+        "调整货箱归属"
+      ],
+      [
+        "Swap",
+        "在两个架次之间互换各一个货箱",
+        "等价规模下的精细调整，不改变架次数"
+      ],
+      [
+        "ChangeType",
+        "将一个架次整架次改派为另一机型",
+        "该架次适用的载重/体积/能量上限与可用电池池随之改变，可在机型库存或电池周转受限时改派机型、缓解资源冲突"
+      ]
+    ],
+    "confidence": "high",
+    "selected_for_problem2": true
+  },
+  {
+    "id": "E012",
+    "type": "equation",
+    "locator": "D26101510024(1).docx 正文段落97，OMML公式12",
+    "summary": "Lg(q)=g0L-g0LgFLqQg32,0≤q≤Qg",
+    "omml_xml": "<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\"><m:sSub><m:sSubPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>L</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>g</m:t></m:r></m:sub></m:sSub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>(q)=</m:t></m:r><m:sSubSup><m:sSubSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>g</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>0</m:t></m:r></m:sub><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>L</m:t></m:r></m:sup></m:sSubSup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>-</m:t></m:r><m:d><m:dPr><m:sepChr m:val=\"−\"/><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:dPr><m:e><m:sSubSup><m:sSubSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>g</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>0</m:t></m:r></m:sub><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>L</m:t></m:r></m:sup></m:sSubSup></m:e><m:e><m:sSubSup><m:sSubSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>g</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>F</m:t></m:r></m:sub><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>L</m:t></m:r></m:sup></m:sSubSup></m:e></m:d><m:sSup><m:sSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSupPr><m:e><m:d><m:dPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:dPr><m:e><m:f><m:fPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:fPr><m:num><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>q</m:t></m:r></m:num><m:den><m:sSub><m:sSubPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>Q</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>g</m:t></m:r></m:sub></m:sSub></m:den></m:f></m:e></m:d></m:e><m:sup><m:f><m:fPr><m:type m:val=\"lin\"/><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:fPr><m:num><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>3</m:t></m:r></m:num><m:den><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>2</m:t></m:r></m:den></m:f></m:sup></m:sSup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>,0≤q≤</m:t></m:r><m:sSub><m:sSubPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>Q</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>g</m:t></m:r></m:sub></m:sSub></m:oMath>",
+    "paragraph_id": "P0097",
+    "confidence": "high",
+    "selected_for_problem2": true
+  },
+  {
+    "id": "E021",
+    "type": "equation",
+    "locator": "D26101510024(1).docx 正文段落109，OMML公式21",
+    "summary": "bends=bstarts-EbbuseE",
+    "omml_xml": "<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\"><m:sSubSup><m:sSubSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>b</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>end</m:t></m:r></m:sub><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>s</m:t></m:r></m:sup></m:sSubSup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>=</m:t></m:r><m:sSubSup><m:sSubSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>b</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>start</m:t></m:r></m:sub><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>s</m:t></m:r></m:sup></m:sSubSup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>-</m:t></m:r><m:f><m:fPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:fPr><m:num><m:sSub><m:sSubPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>E</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>b</m:t></m:r></m:sub></m:sSub></m:num><m:den><m:sSubSup><m:sSubSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>b</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>use</m:t></m:r></m:sub><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>E</m:t></m:r></m:sup></m:sSubSup></m:den></m:f></m:oMath>",
+    "paragraph_id": "P0109",
+    "confidence": "high",
+    "selected_for_problem2": true
+  },
+  {
+    "id": "E022",
+    "type": "equation",
+    "locator": "D26101510024(1).docx 正文段落111，OMML公式22",
+    "summary": "tchg(s)=bfullT0.650.90-s0.900.35,0≤s<0.90bfullT·0.351-s0.10,0.90≤s≤1",
+    "omml_xml": "<m:oMath xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\"><m:sSub><m:sSubPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>t</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>chg</m:t></m:r></m:sub></m:sSub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>(s)=</m:t></m:r><m:d><m:dPr><m:begChr m:val=\"{\"/><m:endChr m:val=\"\"/><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:dPr><m:e><m:m><m:mPr><m:plcHide m:val=\"1\"/><m:mcs><m:mc><m:mcPr><m:count m:val=\"2\"/><m:mcJc m:val=\"center\"/></m:mcPr></m:mc></m:mcs><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:mPr><m:mr><m:e><m:sSubSup><m:sSubSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>b</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>full</m:t></m:r></m:sub><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>T</m:t></m:r></m:sup></m:sSubSup><m:d><m:dPr><m:begChr m:val=\"[\"/><m:sepChr m:val=\"+\"/><m:endChr m:val=\"]\"/><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:dPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>0.65</m:t></m:r><m:f><m:fPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:fPr><m:num><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>0.90-s</m:t></m:r></m:num><m:den><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>0.90</m:t></m:r></m:den></m:f></m:e><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>0.35</m:t></m:r></m:e></m:d><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>,</m:t></m:r></m:e><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>0≤s&lt;0.90</m:t></m:r></m:e></m:mr><m:mr><m:e><m:sSubSup><m:sSubSupPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:sSubSupPr><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>b</m:t></m:r></m:e><m:sub><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>full</m:t></m:r></m:sub><m:sup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>T</m:t></m:r></m:sup></m:sSubSup><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>·0.35</m:t></m:r><m:f><m:fPr><m:ctrlPr><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr></m:ctrlPr></m:fPr><m:num><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>1-s</m:t></m:r></m:num><m:den><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>0.10</m:t></m:r></m:den></m:f><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>,</m:t></m:r></m:e><m:e><m:r><w:rPr><w:rFonts w:ascii=\"Cambria Math\" w:hAnsi=\"Cambria Math\" w:cs=\"Times New Roman\"/><w:szCs w:val=\"24\"/></w:rPr><m:t>0.90≤s≤1</m:t></m:r></m:e></m:mr></m:m></m:e></m:d></m:oMath>",
+    "paragraph_id": "P0111",
+    "confidence": "high",
+    "selected_for_problem2": true
+  }
+]

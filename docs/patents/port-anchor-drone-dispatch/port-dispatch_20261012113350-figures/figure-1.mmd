@@ -1,0 +1,30 @@
+flowchart TB
+S1["S1 获取任务、窗口与资源快照"]
+S2["S2 构造初始架次并调用共用重排"]
+initial["完整初始方案可行？"]
+fail["返回本次未找到初始方案及冲突"]
+adjust["产生任务、访问顺序或机型调整"]
+S3["S3 从快照完整重排资源时间轴"]
+accept["调整后完整排程可行？"]
+keep["保存完整可行候选并比较"]
+discard["丢弃失败候选的状态副本"]
+budget["仍有搜索预算？"]
+S4["S4 选取可行方案并独立复算"]
+auditok["复算通过？"]
+out["输出配送、换电与充电预约"]
+noout["返回复算冲突，不输出该方案"]
+S1 --> S2
+S2 --> initial
+initial -->|否| fail
+initial -->|是| adjust
+adjust --> S3
+S3 --> accept
+accept -->|是| keep
+accept -->|否| discard
+keep --> budget
+discard --> budget
+budget -->|是| adjust
+budget -->|否| S4
+S4 --> auditok
+auditok -->|是| out
+auditok -->|否| noout

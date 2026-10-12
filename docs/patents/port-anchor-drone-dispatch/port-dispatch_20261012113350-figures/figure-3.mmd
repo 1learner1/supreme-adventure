@@ -1,0 +1,10 @@
+flowchart TB
+route["货箱组合 访问顺序或机型变化"]
+energy["剩余载荷变化带来返航电量变化"]
+queue["拆卸冷却、工位排队和充电时长变化"]
+ready["满电再次可用与后续起飞时刻变化"]
+window["重新检查后续船舶接收窗口与硬截止"]
+route --> energy
+energy --> queue
+queue --> ready
+ready --> window

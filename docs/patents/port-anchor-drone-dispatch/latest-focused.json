@@ -1,9 +1,9 @@
 {
-  "version": "port-dispatch_20261012105818",
-  "word": "port-dispatch_20261012105818.docx",
-  "markdown": "port-dispatch_20261012105818.md",
-  "notes": "port-dispatch_20261012105818-revision-notes.md",
-  "checks": "port-dispatch_20261012105818-checks.json",
-  "prototype": "port-dispatch_20261012105818-scheduler.py",
-  "scope": "本轮用户提出的海事扩展；人工小例验证"
+  "version": "port-dispatch_20261012113350",
+  "word": "port-dispatch_20261012113350.docx",
+  "markdown": "port-dispatch_20261012113350.md",
+  "review": "port-dispatch_20261012113350-review.docx",
+  "evidence_index": "port-dispatch_20261012113350-source-index.md",
+  "prototype": "port-dispatch_20261012113350-scheduler.py",
+  "run_log": "port-dispatch_20261012113350-run-log.txt"
 }

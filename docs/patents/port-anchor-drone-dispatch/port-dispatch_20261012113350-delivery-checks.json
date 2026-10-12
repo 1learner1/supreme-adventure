@@ -1,0 +1,11 @@
+{
+  "baseline_and_shared_station_and_reverse_values_unchanged": true,
+  "post_charge_120_seconds_blocks_battery_reuse": true,
+  "all_orders_failure_is_procedural": true,
+  "formal_text_without_drafting_notes_or_code_style_variables": true,
+  "native_math_objects": 97,
+  "embedded_figures": 4,
+  "review_table_repeat_header": true,
+  "review_table_rows_do_not_split": true,
+  "evidence_source_ids_and_functions_resolve": true
+}

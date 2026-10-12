@@ -1,0 +1,3218 @@
+{
+  "runtime_trace": [
+    {
+      "event": "ORDER_START",
+      "attempt": 1,
+      "priority": [
+        "P2",
+        "P1",
+        "P4",
+        "P3"
+      ],
+      "snapshot_sha256": "76b23130fd564d7fd9083404a3084224935c06a0aebcd3097d9a300f7108a910",
+      "initial_u": {
+        "A-U1": 0.0,
+        "A-U2": 0.0,
+        "B-U1": 0.0
+      },
+      "initial_b": {
+        "A-B1": 0.0,
+        "A-B2": 0.0,
+        "B-B1": 0.0
+      },
+      "initial_c": {
+        "A-C1": 0.0,
+        "B-C1": 0.0
+      }
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 1,
+      "job": "P2",
+      "valid_bindings": 4
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 1,
+      "job": "P2",
+      "comparison_key": [
+        0,
+        686.6666666666666,
+        1534.5491819084286,
+        1.2042087066060998,
+        1534.5491819084286,
+        "A-U1",
+        "A-B1",
+        "A-C1",
+        [
+          "V3"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P2",
+        "type": "A",
+        "boxes": [
+          "K3"
+        ],
+        "order": [
+          "V3"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 686.6666666666666,
+        "energy": 1.2042087066060998,
+        "soc": 0.7323980651986445,
+        "charge_start": 686.6666666666666,
+        "charge_end": 1534.5491819084286,
+        "battery_full_ready": 1534.5491819084286,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V3": 343.3333333333333
+        },
+        "arrival": {
+          "V3": 283.3333333333333
+        },
+        "selected_windows": {
+          "V3": [
+            60,
+            410
+          ]
+        },
+        "window_interval": [
+          -223.33333333333331,
+          66.66666666666669
+        ],
+        "u_interval": [
+          0.0,
+          746.6666666666666
+        ],
+        "b_interval": [
+          0.0,
+          1534.5491819084286
+        ],
+        "c_interval": [
+          686.6666666666666,
+          1534.5491819084286
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 1,
+      "job": "P2",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "A-C1",
+      "u_available": 746.6666666666666,
+      "b_available": 1534.5491819084286,
+      "c_available": 1534.5491819084286
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 1,
+      "job": "P1",
+      "valid_bindings": 1
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 1,
+      "job": "P1",
+      "comparison_key": [
+        0,
+        940.0,
+        2512.9819259137357,
+        1.6561133446337557,
+        2512.9819259137357,
+        "A-U2",
+        "A-B2",
+        "A-C1",
+        [
+          "V1",
+          "V2"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P1",
+        "type": "A",
+        "boxes": [
+          "K1",
+          "K2"
+        ],
+        "order": [
+          "V1",
+          "V2"
+        ],
+        "drone": "A-U2",
+        "battery": "A-B2",
+        "station": "A-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 940.0,
+        "energy": 1.6561133446337557,
+        "soc": 0.6319748123036099,
+        "charge_start": 1534.5491819084286,
+        "charge_end": 2512.9819259137357,
+        "battery_full_ready": 2512.9819259137357,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V1": 260.0,
+          "V2": 513.3333333333334
+        },
+        "arrival": {
+          "V1": 200.0,
+          "V2": 453.33333333333337
+        },
+        "selected_windows": {
+          "V1": [
+            60,
+            460
+          ],
+          "V2": [
+            60,
+            760
+          ]
+        },
+        "window_interval": [
+          -140.0,
+          200.0
+        ],
+        "u_interval": [
+          0.0,
+          1000.0
+        ],
+        "b_interval": [
+          0.0,
+          2512.9819259137357
+        ],
+        "c_interval": [
+          1534.5491819084286,
+          2512.9819259137357
+        ],
+        "queue": 594.5491819084286
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 1,
+      "job": "P1",
+      "drone": "A-U2",
+      "battery": "A-B2",
+      "station": "A-C1",
+      "u_available": 1000.0,
+      "b_available": 2512.9819259137357,
+      "c_available": 2512.9819259137357
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 1,
+      "job": "P4",
+      "valid_bindings": 1
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 1,
+      "job": "P4",
+      "comparison_key": [
+        0,
+        586.6666666666667,
+        1688.0758131434902,
+        1.0032518764849772,
+        1688.0758131434902,
+        "B-U1",
+        "B-B1",
+        "B-C1",
+        [
+          "V5"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P4",
+        "type": "B",
+        "boxes": [
+          "K5"
+        ],
+        "order": [
+          "V5"
+        ],
+        "drone": "B-U1",
+        "battery": "B-B1",
+        "station": "B-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 586.6666666666667,
+        "energy": 1.0032518764849772,
+        "soc": 0.7491870308787557,
+        "charge_start": 586.6666666666667,
+        "charge_end": 1688.0758131434902,
+        "battery_full_ready": 1688.0758131434902,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V5": 293.33333333333337
+        },
+        "arrival": {
+          "V5": 233.33333333333334
+        },
+        "selected_windows": {
+          "V5": [
+            60,
+            660
+          ]
+        },
+        "window_interval": [
+          -173.33333333333334,
+          366.66666666666663
+        ],
+        "u_interval": [
+          0.0,
+          646.6666666666667
+        ],
+        "b_interval": [
+          0.0,
+          1688.0758131434902
+        ],
+        "c_interval": [
+          586.6666666666667,
+          1688.0758131434902
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 1,
+      "job": "P4",
+      "drone": "B-U1",
+      "battery": "B-B1",
+      "station": "B-C1",
+      "u_available": 646.6666666666667,
+      "b_available": 1688.0758131434902,
+      "c_available": 1688.0758131434902
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 1,
+      "job": "P3",
+      "valid_bindings": 2
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 1,
+      "job": "P3",
+      "comparison_key": [
+        0,
+        1956.9181089706112,
+        3188.640422952048,
+        0.6080486435941586,
+        3188.640422952048,
+        "A-U1",
+        "A-B1",
+        "A-C1",
+        [
+          "V4"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P3",
+        "type": "A",
+        "boxes": [
+          "K4"
+        ],
+        "order": [
+          "V4"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 1534.5491819084286,
+        "takeoff": 1594.5491819084286,
+        "return": 1956.9181089706112,
+        "energy": 0.6080486435941586,
+        "soc": 0.8648780792012981,
+        "charge_start": 2512.9819259137357,
+        "charge_end": 3188.640422952048,
+        "battery_full_ready": 3188.640422952048,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V4": 211.18446353109127
+        },
+        "arrival": {
+          "V4": 151.18446353109127
+        },
+        "selected_windows": {
+          "V4": [
+            60,
+            1860
+          ]
+        },
+        "window_interval": [
+          -91.18446353109127,
+          1648.8155364689087
+        ],
+        "u_interval": [
+          1534.5491819084286,
+          2016.9181089706112
+        ],
+        "b_interval": [
+          1534.5491819084286,
+          3188.640422952048
+        ],
+        "c_interval": [
+          2512.9819259137357,
+          3188.640422952048
+        ],
+        "queue": 556.0638169431245
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 1,
+      "job": "P3",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "A-C1",
+      "u_available": 2016.9181089706112,
+      "b_available": 3188.640422952048,
+      "c_available": 3188.640422952048
+    },
+    {
+      "event": "ORDER_COMPLETE",
+      "attempt": 1,
+      "objective": [
+        0,
+        1956.9181089706112,
+        4.471622571318991,
+        4
+      ],
+      "input_unchanged": true
+    },
+    {
+      "event": "ORDER_START",
+      "attempt": 2,
+      "priority": [
+        "P2",
+        "P1",
+        "P4",
+        "P3"
+      ],
+      "snapshot_sha256": "76b23130fd564d7fd9083404a3084224935c06a0aebcd3097d9a300f7108a910",
+      "initial_u": {
+        "A-U1": 0.0,
+        "A-U2": 0.0,
+        "B-U1": 0.0
+      },
+      "initial_b": {
+        "A-B1": 0.0,
+        "A-B2": 0.0,
+        "B-B1": 0.0
+      },
+      "initial_c": {
+        "A-C1": 0.0,
+        "B-C1": 0.0
+      }
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 2,
+      "job": "P2",
+      "valid_bindings": 4
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 2,
+      "job": "P2",
+      "comparison_key": [
+        0,
+        686.6666666666666,
+        1534.5491819084286,
+        1.2042087066060998,
+        1534.5491819084286,
+        "A-U1",
+        "A-B1",
+        "A-C1",
+        [
+          "V3"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P2",
+        "type": "A",
+        "boxes": [
+          "K3"
+        ],
+        "order": [
+          "V3"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 686.6666666666666,
+        "energy": 1.2042087066060998,
+        "soc": 0.7323980651986445,
+        "charge_start": 686.6666666666666,
+        "charge_end": 1534.5491819084286,
+        "battery_full_ready": 1534.5491819084286,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V3": 343.3333333333333
+        },
+        "arrival": {
+          "V3": 283.3333333333333
+        },
+        "selected_windows": {
+          "V3": [
+            60,
+            410
+          ]
+        },
+        "window_interval": [
+          -223.33333333333331,
+          66.66666666666669
+        ],
+        "u_interval": [
+          0.0,
+          746.6666666666666
+        ],
+        "b_interval": [
+          0.0,
+          1534.5491819084286
+        ],
+        "c_interval": [
+          686.6666666666666,
+          1534.5491819084286
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 2,
+      "job": "P2",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "A-C1",
+      "u_available": 746.6666666666666,
+      "b_available": 1534.5491819084286,
+      "c_available": 1534.5491819084286
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 2,
+      "job": "P1",
+      "valid_bindings": 0
+    },
+    {
+      "event": "ORDER_ROLLBACK",
+      "attempt": 2,
+      "failed_job": "P1",
+      "discarded_jobs": 1,
+      "reasons": [
+        "READINESS_WINDOW: earliest=1594.549182 upper=-220.000000 battery=A-B1",
+        "READINESS_WINDOW: earliest=60.000000 upper=-220.000000 battery=A-B2",
+        "READINESS_WINDOW: earliest=806.666667 upper=-220.000000 battery=A-B2"
+      ],
+      "input_unchanged": true
+    },
+    {
+      "event": "STALE_BATTERY_RECORD_REJECTED",
+      "reason": "AUDIT_NOT_READY"
+    },
+    {
+      "event": "ORDER_START",
+      "attempt": 3,
+      "priority": [
+        "P4",
+        "P2",
+        "P3"
+      ],
+      "snapshot_sha256": "229f484ef4db3c1ecbc6e07ac12e25abe5a5c389f6ba2ba99915a8c817a8e732",
+      "initial_u": {
+        "A-U1": 0.0,
+        "A-U2": 0.0,
+        "B-U1": 0.0
+      },
+      "initial_b": {
+        "A-B1": 0.0,
+        "B-B1": 0.0
+      },
+      "initial_c": {
+        "A-C1": 0.0,
+        "B-C1": 0.0
+      }
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 3,
+      "job": "P4",
+      "valid_bindings": 1
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 3,
+      "job": "P4",
+      "comparison_key": [
+        0,
+        586.6666666666667,
+        1688.0758131434902,
+        1.0032518764849772,
+        1688.0758131434902,
+        "B-U1",
+        "B-B1",
+        "B-C1",
+        [
+          "V5"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P4",
+        "type": "B",
+        "boxes": [
+          "K5"
+        ],
+        "order": [
+          "V5"
+        ],
+        "drone": "B-U1",
+        "battery": "B-B1",
+        "station": "B-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 586.6666666666667,
+        "energy": 1.0032518764849772,
+        "soc": 0.7491870308787557,
+        "charge_start": 586.6666666666667,
+        "charge_end": 1688.0758131434902,
+        "battery_full_ready": 1688.0758131434902,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V5": 293.33333333333337
+        },
+        "arrival": {
+          "V5": 233.33333333333334
+        },
+        "selected_windows": {
+          "V5": [
+            60,
+            660
+          ]
+        },
+        "window_interval": [
+          -173.33333333333334,
+          366.66666666666663
+        ],
+        "u_interval": [
+          0.0,
+          646.6666666666667
+        ],
+        "b_interval": [
+          0.0,
+          1688.0758131434902
+        ],
+        "c_interval": [
+          586.6666666666667,
+          1688.0758131434902
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 3,
+      "job": "P4",
+      "drone": "B-U1",
+      "battery": "B-B1",
+      "station": "B-C1",
+      "u_available": 646.6666666666667,
+      "b_available": 1688.0758131434902,
+      "c_available": 1688.0758131434902
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 3,
+      "job": "P2",
+      "valid_bindings": 2
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 3,
+      "job": "P2",
+      "comparison_key": [
+        0,
+        686.6666666666666,
+        1534.5491819084286,
+        1.2042087066060998,
+        1534.5491819084286,
+        "A-U1",
+        "A-B1",
+        "A-C1",
+        [
+          "V3"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P2",
+        "type": "A",
+        "boxes": [
+          "K3"
+        ],
+        "order": [
+          "V3"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 686.6666666666666,
+        "energy": 1.2042087066060998,
+        "soc": 0.7323980651986445,
+        "charge_start": 686.6666666666666,
+        "charge_end": 1534.5491819084286,
+        "battery_full_ready": 1534.5491819084286,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V3": 343.3333333333333
+        },
+        "arrival": {
+          "V3": 283.3333333333333
+        },
+        "selected_windows": {
+          "V3": [
+            60,
+            410
+          ]
+        },
+        "window_interval": [
+          -223.33333333333331,
+          66.66666666666669
+        ],
+        "u_interval": [
+          0.0,
+          746.6666666666666
+        ],
+        "b_interval": [
+          0.0,
+          1534.5491819084286
+        ],
+        "c_interval": [
+          686.6666666666666,
+          1534.5491819084286
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 3,
+      "job": "P2",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "A-C1",
+      "u_available": 746.6666666666666,
+      "b_available": 1534.5491819084286,
+      "c_available": 1534.5491819084286
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 3,
+      "job": "P3",
+      "valid_bindings": 2
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 3,
+      "job": "P3",
+      "comparison_key": [
+        0,
+        1956.9181089706112,
+        2632.5766060089236,
+        0.6080486435941586,
+        2632.5766060089236,
+        "A-U1",
+        "A-B1",
+        "A-C1",
+        [
+          "V4"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P3",
+        "type": "A",
+        "boxes": [
+          "K4"
+        ],
+        "order": [
+          "V4"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 1534.5491819084286,
+        "takeoff": 1594.5491819084286,
+        "return": 1956.9181089706112,
+        "energy": 0.6080486435941586,
+        "soc": 0.8648780792012981,
+        "charge_start": 1956.9181089706112,
+        "charge_end": 2632.5766060089236,
+        "battery_full_ready": 2632.5766060089236,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V4": 211.18446353109127
+        },
+        "arrival": {
+          "V4": 151.18446353109127
+        },
+        "selected_windows": {
+          "V4": [
+            60,
+            1860
+          ]
+        },
+        "window_interval": [
+          -91.18446353109127,
+          1648.8155364689087
+        ],
+        "u_interval": [
+          1534.5491819084286,
+          2016.9181089706112
+        ],
+        "b_interval": [
+          1534.5491819084286,
+          2632.5766060089236
+        ],
+        "c_interval": [
+          1956.9181089706112,
+          2632.5766060089236
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 3,
+      "job": "P3",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "A-C1",
+      "u_available": 2016.9181089706112,
+      "b_available": 2632.5766060089236,
+      "c_available": 2632.5766060089236
+    },
+    {
+      "event": "ORDER_COMPLETE",
+      "attempt": 3,
+      "objective": [
+        0,
+        1956.9181089706112,
+        2.8155092266852355,
+        3
+      ],
+      "input_unchanged": true
+    },
+    {
+      "event": "ORDER_START",
+      "attempt": 4,
+      "priority": [
+        "P4",
+        "P2",
+        "P3"
+      ],
+      "snapshot_sha256": "17e40f06e5383588af35d5f84e94450cf9be51c4e98ffad53f3bbc9c56b569b1",
+      "initial_u": {
+        "A-U1": 0.0,
+        "A-U2": 0.0,
+        "B-U1": 0.0
+      },
+      "initial_b": {
+        "A-B1": 0.0,
+        "B-B1": 0.0
+      },
+      "initial_c": {
+        "SHARED-C1": 0.0
+      }
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 4,
+      "job": "P4",
+      "valid_bindings": 1
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 4,
+      "job": "P4",
+      "comparison_key": [
+        0,
+        586.6666666666667,
+        1688.0758131434902,
+        1.0032518764849772,
+        1688.0758131434902,
+        "B-U1",
+        "B-B1",
+        "SHARED-C1",
+        [
+          "V5"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P4",
+        "type": "B",
+        "boxes": [
+          "K5"
+        ],
+        "order": [
+          "V5"
+        ],
+        "drone": "B-U1",
+        "battery": "B-B1",
+        "station": "SHARED-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 586.6666666666667,
+        "energy": 1.0032518764849772,
+        "soc": 0.7491870308787557,
+        "charge_start": 586.6666666666667,
+        "charge_end": 1688.0758131434902,
+        "battery_full_ready": 1688.0758131434902,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V5": 293.33333333333337
+        },
+        "arrival": {
+          "V5": 233.33333333333334
+        },
+        "selected_windows": {
+          "V5": [
+            60,
+            660
+          ]
+        },
+        "window_interval": [
+          -173.33333333333334,
+          366.66666666666663
+        ],
+        "u_interval": [
+          0.0,
+          646.6666666666667
+        ],
+        "b_interval": [
+          0.0,
+          1688.0758131434902
+        ],
+        "c_interval": [
+          586.6666666666667,
+          1688.0758131434902
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 4,
+      "job": "P4",
+      "drone": "B-U1",
+      "battery": "B-B1",
+      "station": "SHARED-C1",
+      "u_available": 646.6666666666667,
+      "b_available": 1688.0758131434902,
+      "c_available": 1688.0758131434902
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 4,
+      "job": "P2",
+      "valid_bindings": 2
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 4,
+      "job": "P2",
+      "comparison_key": [
+        0,
+        686.6666666666666,
+        2535.9583283852526,
+        1.2042087066060998,
+        2535.9583283852526,
+        "A-U1",
+        "A-B1",
+        "SHARED-C1",
+        [
+          "V3"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P2",
+        "type": "A",
+        "boxes": [
+          "K3"
+        ],
+        "order": [
+          "V3"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "SHARED-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 686.6666666666666,
+        "energy": 1.2042087066060998,
+        "soc": 0.7323980651986445,
+        "charge_start": 1688.0758131434902,
+        "charge_end": 2535.9583283852526,
+        "battery_full_ready": 2535.9583283852526,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V3": 343.3333333333333
+        },
+        "arrival": {
+          "V3": 283.3333333333333
+        },
+        "selected_windows": {
+          "V3": [
+            60,
+            410
+          ]
+        },
+        "window_interval": [
+          -223.33333333333331,
+          66.66666666666669
+        ],
+        "u_interval": [
+          0.0,
+          746.6666666666666
+        ],
+        "b_interval": [
+          0.0,
+          2535.9583283852526
+        ],
+        "c_interval": [
+          1688.0758131434902,
+          2535.9583283852526
+        ],
+        "queue": 1001.4091464768236
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 4,
+      "job": "P2",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "SHARED-C1",
+      "u_available": 746.6666666666666,
+      "b_available": 2535.9583283852526,
+      "c_available": 2535.9583283852526
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 4,
+      "job": "P3",
+      "valid_bindings": 0
+    },
+    {
+      "event": "ORDER_ROLLBACK",
+      "attempt": 4,
+      "failed_job": "P3",
+      "discarded_jobs": 2,
+      "reasons": [
+        "READINESS_WINDOW: earliest=2595.958328 upper=1648.815536 battery=A-B1"
+      ],
+      "input_unchanged": true
+    },
+    {
+      "event": "ORDER_START",
+      "attempt": 5,
+      "priority": [
+        "P2",
+        "P4",
+        "P3"
+      ],
+      "snapshot_sha256": "17e40f06e5383588af35d5f84e94450cf9be51c4e98ffad53f3bbc9c56b569b1",
+      "initial_u": {
+        "A-U1": 0.0,
+        "A-U2": 0.0,
+        "B-U1": 0.0
+      },
+      "initial_b": {
+        "A-B1": 0.0,
+        "B-B1": 0.0
+      },
+      "initial_c": {
+        "SHARED-C1": 0.0
+      }
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 5,
+      "job": "P2",
+      "valid_bindings": 2
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 5,
+      "job": "P2",
+      "comparison_key": [
+        0,
+        686.6666666666666,
+        1534.5491819084286,
+        1.2042087066060998,
+        1534.5491819084286,
+        "A-U1",
+        "A-B1",
+        "SHARED-C1",
+        [
+          "V3"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P2",
+        "type": "A",
+        "boxes": [
+          "K3"
+        ],
+        "order": [
+          "V3"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "SHARED-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 686.6666666666666,
+        "energy": 1.2042087066060998,
+        "soc": 0.7323980651986445,
+        "charge_start": 686.6666666666666,
+        "charge_end": 1534.5491819084286,
+        "battery_full_ready": 1534.5491819084286,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V3": 343.3333333333333
+        },
+        "arrival": {
+          "V3": 283.3333333333333
+        },
+        "selected_windows": {
+          "V3": [
+            60,
+            410
+          ]
+        },
+        "window_interval": [
+          -223.33333333333331,
+          66.66666666666669
+        ],
+        "u_interval": [
+          0.0,
+          746.6666666666666
+        ],
+        "b_interval": [
+          0.0,
+          1534.5491819084286
+        ],
+        "c_interval": [
+          686.6666666666666,
+          1534.5491819084286
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 5,
+      "job": "P2",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "SHARED-C1",
+      "u_available": 746.6666666666666,
+      "b_available": 1534.5491819084286,
+      "c_available": 1534.5491819084286
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 5,
+      "job": "P4",
+      "valid_bindings": 1
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 5,
+      "job": "P4",
+      "comparison_key": [
+        0,
+        586.6666666666667,
+        2635.958328385252,
+        1.0032518764849772,
+        2635.958328385252,
+        "B-U1",
+        "B-B1",
+        "SHARED-C1",
+        [
+          "V5"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P4",
+        "type": "B",
+        "boxes": [
+          "K5"
+        ],
+        "order": [
+          "V5"
+        ],
+        "drone": "B-U1",
+        "battery": "B-B1",
+        "station": "SHARED-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 586.6666666666667,
+        "energy": 1.0032518764849772,
+        "soc": 0.7491870308787557,
+        "charge_start": 1534.5491819084286,
+        "charge_end": 2635.958328385252,
+        "battery_full_ready": 2635.958328385252,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V5": 293.33333333333337
+        },
+        "arrival": {
+          "V5": 233.33333333333334
+        },
+        "selected_windows": {
+          "V5": [
+            60,
+            660
+          ]
+        },
+        "window_interval": [
+          -173.33333333333334,
+          366.66666666666663
+        ],
+        "u_interval": [
+          0.0,
+          646.6666666666667
+        ],
+        "b_interval": [
+          0.0,
+          2635.958328385252
+        ],
+        "c_interval": [
+          1534.5491819084286,
+          2635.958328385252
+        ],
+        "queue": 947.8825152417619
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 5,
+      "job": "P4",
+      "drone": "B-U1",
+      "battery": "B-B1",
+      "station": "SHARED-C1",
+      "u_available": 646.6666666666667,
+      "b_available": 2635.958328385252,
+      "c_available": 2635.958328385252
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 5,
+      "job": "P3",
+      "valid_bindings": 2
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 5,
+      "job": "P3",
+      "comparison_key": [
+        0,
+        1956.9181089706112,
+        3311.6168254235645,
+        0.6080486435941586,
+        3311.6168254235645,
+        "A-U1",
+        "A-B1",
+        "SHARED-C1",
+        [
+          "V4"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P3",
+        "type": "A",
+        "boxes": [
+          "K4"
+        ],
+        "order": [
+          "V4"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "SHARED-C1",
+        "prepare_start": 1534.5491819084286,
+        "takeoff": 1594.5491819084286,
+        "return": 1956.9181089706112,
+        "energy": 0.6080486435941586,
+        "soc": 0.8648780792012981,
+        "charge_start": 2635.958328385252,
+        "charge_end": 3311.6168254235645,
+        "battery_full_ready": 3311.6168254235645,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V4": 211.18446353109127
+        },
+        "arrival": {
+          "V4": 151.18446353109127
+        },
+        "selected_windows": {
+          "V4": [
+            60,
+            1860
+          ]
+        },
+        "window_interval": [
+          -91.18446353109127,
+          1648.8155364689087
+        ],
+        "u_interval": [
+          1534.5491819084286,
+          2016.9181089706112
+        ],
+        "b_interval": [
+          1534.5491819084286,
+          3311.6168254235645
+        ],
+        "c_interval": [
+          2635.958328385252,
+          3311.6168254235645
+        ],
+        "queue": 679.0402194146409
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 5,
+      "job": "P3",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "SHARED-C1",
+      "u_available": 2016.9181089706112,
+      "b_available": 3311.6168254235645,
+      "c_available": 3311.6168254235645
+    },
+    {
+      "event": "ORDER_COMPLETE",
+      "attempt": 5,
+      "objective": [
+        0,
+        1956.9181089706112,
+        2.8155092266852355,
+        3
+      ],
+      "input_unchanged": true
+    },
+    {
+      "event": "ORDER_START",
+      "attempt": 6,
+      "priority": [
+        "P2",
+        "P1",
+        "P4",
+        "P3"
+      ],
+      "snapshot_sha256": "76b23130fd564d7fd9083404a3084224935c06a0aebcd3097d9a300f7108a910",
+      "initial_u": {
+        "A-U1": 0.0,
+        "A-U2": 0.0,
+        "B-U1": 0.0
+      },
+      "initial_b": {
+        "A-B1": 0.0,
+        "A-B2": 0.0,
+        "B-B1": 0.0
+      },
+      "initial_c": {
+        "A-C1": 0.0,
+        "B-C1": 0.0
+      }
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 6,
+      "job": "P2",
+      "valid_bindings": 4
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 6,
+      "job": "P2",
+      "comparison_key": [
+        0,
+        686.6666666666666,
+        1534.5491819084286,
+        1.2042087066060998,
+        1534.5491819084286,
+        "A-U1",
+        "A-B1",
+        "A-C1",
+        [
+          "V3"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P2",
+        "type": "A",
+        "boxes": [
+          "K3"
+        ],
+        "order": [
+          "V3"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 686.6666666666666,
+        "energy": 1.2042087066060998,
+        "soc": 0.7323980651986445,
+        "charge_start": 686.6666666666666,
+        "charge_end": 1534.5491819084286,
+        "battery_full_ready": 1534.5491819084286,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V3": 343.3333333333333
+        },
+        "arrival": {
+          "V3": 283.3333333333333
+        },
+        "selected_windows": {
+          "V3": [
+            60,
+            410
+          ]
+        },
+        "window_interval": [
+          -223.33333333333331,
+          66.66666666666669
+        ],
+        "u_interval": [
+          0.0,
+          746.6666666666666
+        ],
+        "b_interval": [
+          0.0,
+          1534.5491819084286
+        ],
+        "c_interval": [
+          686.6666666666666,
+          1534.5491819084286
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 6,
+      "job": "P2",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "A-C1",
+      "u_available": 746.6666666666666,
+      "b_available": 1534.5491819084286,
+      "c_available": 1534.5491819084286
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 6,
+      "job": "P1",
+      "valid_bindings": 1
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 6,
+      "job": "P1",
+      "comparison_key": [
+        0,
+        940.0,
+        2512.9819259137357,
+        1.6561133446337557,
+        2512.9819259137357,
+        "A-U2",
+        "A-B2",
+        "A-C1",
+        [
+          "V1",
+          "V2"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P1",
+        "type": "A",
+        "boxes": [
+          "K1",
+          "K2"
+        ],
+        "order": [
+          "V1",
+          "V2"
+        ],
+        "drone": "A-U2",
+        "battery": "A-B2",
+        "station": "A-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 940.0,
+        "energy": 1.6561133446337557,
+        "soc": 0.6319748123036099,
+        "charge_start": 1534.5491819084286,
+        "charge_end": 2512.9819259137357,
+        "battery_full_ready": 2512.9819259137357,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V1": 260.0,
+          "V2": 513.3333333333334
+        },
+        "arrival": {
+          "V1": 200.0,
+          "V2": 453.33333333333337
+        },
+        "selected_windows": {
+          "V1": [
+            60,
+            460
+          ],
+          "V2": [
+            60,
+            760
+          ]
+        },
+        "window_interval": [
+          -140.0,
+          200.0
+        ],
+        "u_interval": [
+          0.0,
+          1000.0
+        ],
+        "b_interval": [
+          0.0,
+          2512.9819259137357
+        ],
+        "c_interval": [
+          1534.5491819084286,
+          2512.9819259137357
+        ],
+        "queue": 594.5491819084286
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 6,
+      "job": "P1",
+      "drone": "A-U2",
+      "battery": "A-B2",
+      "station": "A-C1",
+      "u_available": 1000.0,
+      "b_available": 2512.9819259137357,
+      "c_available": 2512.9819259137357
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 6,
+      "job": "P4",
+      "valid_bindings": 1
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 6,
+      "job": "P4",
+      "comparison_key": [
+        0,
+        586.6666666666667,
+        1688.0758131434902,
+        1.0032518764849772,
+        1688.0758131434902,
+        "B-U1",
+        "B-B1",
+        "B-C1",
+        [
+          "V5"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P4",
+        "type": "B",
+        "boxes": [
+          "K5"
+        ],
+        "order": [
+          "V5"
+        ],
+        "drone": "B-U1",
+        "battery": "B-B1",
+        "station": "B-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 586.6666666666667,
+        "energy": 1.0032518764849772,
+        "soc": 0.7491870308787557,
+        "charge_start": 586.6666666666667,
+        "charge_end": 1688.0758131434902,
+        "battery_full_ready": 1688.0758131434902,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V5": 293.33333333333337
+        },
+        "arrival": {
+          "V5": 233.33333333333334
+        },
+        "selected_windows": {
+          "V5": [
+            60,
+            660
+          ]
+        },
+        "window_interval": [
+          -173.33333333333334,
+          366.66666666666663
+        ],
+        "u_interval": [
+          0.0,
+          646.6666666666667
+        ],
+        "b_interval": [
+          0.0,
+          1688.0758131434902
+        ],
+        "c_interval": [
+          586.6666666666667,
+          1688.0758131434902
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 6,
+      "job": "P4",
+      "drone": "B-U1",
+      "battery": "B-B1",
+      "station": "B-C1",
+      "u_available": 646.6666666666667,
+      "b_available": 1688.0758131434902,
+      "c_available": 1688.0758131434902
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 6,
+      "job": "P3",
+      "valid_bindings": 2
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 6,
+      "job": "P3",
+      "comparison_key": [
+        0,
+        1956.9181089706112,
+        3188.640422952048,
+        0.6080486435941586,
+        3188.640422952048,
+        "A-U1",
+        "A-B1",
+        "A-C1",
+        [
+          "V4"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P3",
+        "type": "A",
+        "boxes": [
+          "K4"
+        ],
+        "order": [
+          "V4"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 1534.5491819084286,
+        "takeoff": 1594.5491819084286,
+        "return": 1956.9181089706112,
+        "energy": 0.6080486435941586,
+        "soc": 0.8648780792012981,
+        "charge_start": 2512.9819259137357,
+        "charge_end": 3188.640422952048,
+        "battery_full_ready": 3188.640422952048,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V4": 211.18446353109127
+        },
+        "arrival": {
+          "V4": 151.18446353109127
+        },
+        "selected_windows": {
+          "V4": [
+            60,
+            1860
+          ]
+        },
+        "window_interval": [
+          -91.18446353109127,
+          1648.8155364689087
+        ],
+        "u_interval": [
+          1534.5491819084286,
+          2016.9181089706112
+        ],
+        "b_interval": [
+          1534.5491819084286,
+          3188.640422952048
+        ],
+        "c_interval": [
+          2512.9819259137357,
+          3188.640422952048
+        ],
+        "queue": 556.0638169431245
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 6,
+      "job": "P3",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "A-C1",
+      "u_available": 2016.9181089706112,
+      "b_available": 3188.640422952048,
+      "c_available": 3188.640422952048
+    },
+    {
+      "event": "ORDER_COMPLETE",
+      "attempt": 6,
+      "objective": [
+        0,
+        1956.9181089706112,
+        4.471622571318991,
+        4
+      ],
+      "input_unchanged": true
+    },
+    {
+      "event": "ORDER_START",
+      "attempt": 7,
+      "priority": [
+        "P2",
+        "P3"
+      ],
+      "snapshot_sha256": "3c87755b95e0519941c4cc97a640dc1add6e9500adb1716cbf9aa603ff538682",
+      "initial_u": {
+        "A-U1": 0.0,
+        "A-U2": 0.0
+      },
+      "initial_b": {
+        "A-B1": 0.0
+      },
+      "initial_c": {
+        "A-C1": 0.0
+      }
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 7,
+      "job": "P2",
+      "valid_bindings": 2
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 7,
+      "job": "P2",
+      "comparison_key": [
+        0,
+        686.6666666666666,
+        1654.5491819084286,
+        1.2042087066060998,
+        1534.5491819084286,
+        "A-U1",
+        "A-B1",
+        "A-C1",
+        [
+          "V3"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P2",
+        "type": "A",
+        "boxes": [
+          "K3"
+        ],
+        "order": [
+          "V3"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 686.6666666666666,
+        "energy": 1.2042087066060998,
+        "soc": 0.7323980651986445,
+        "charge_start": 686.6666666666666,
+        "charge_end": 1534.5491819084286,
+        "battery_full_ready": 1654.5491819084286,
+        "post_charge_delay": 120.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V3": 343.3333333333333
+        },
+        "arrival": {
+          "V3": 283.3333333333333
+        },
+        "selected_windows": {
+          "V3": [
+            60,
+            410
+          ]
+        },
+        "window_interval": [
+          -223.33333333333331,
+          66.66666666666669
+        ],
+        "u_interval": [
+          0.0,
+          746.6666666666666
+        ],
+        "b_interval": [
+          0.0,
+          1654.5491819084286
+        ],
+        "c_interval": [
+          686.6666666666666,
+          1534.5491819084286
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 7,
+      "job": "P2",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "A-C1",
+      "u_available": 746.6666666666666,
+      "b_available": 1654.5491819084286,
+      "c_available": 1534.5491819084286
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 7,
+      "job": "P3",
+      "valid_bindings": 2
+    },
+    {
+      "event": "BINDING_SELECTED",
+      "attempt": 7,
+      "job": "P3",
+      "comparison_key": [
+        0,
+        2076.9181089706112,
+        2872.5766060089236,
+        0.6080486435941586,
+        2752.5766060089236,
+        "A-U1",
+        "A-B1",
+        "A-C1",
+        [
+          "V4"
+        ],
+        0
+      ],
+      "selected_record": {
+        "job": "P3",
+        "type": "A",
+        "boxes": [
+          "K4"
+        ],
+        "order": [
+          "V4"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 1654.5491819084286,
+        "takeoff": 1714.5491819084286,
+        "return": 2076.9181089706112,
+        "energy": 0.6080486435941586,
+        "soc": 0.8648780792012981,
+        "charge_start": 2076.9181089706112,
+        "charge_end": 2752.5766060089236,
+        "battery_full_ready": 2872.5766060089236,
+        "post_charge_delay": 120.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V4": 211.18446353109127
+        },
+        "arrival": {
+          "V4": 151.18446353109127
+        },
+        "selected_windows": {
+          "V4": [
+            60,
+            2600
+          ]
+        },
+        "window_interval": [
+          -91.18446353109127,
+          2388.8155364689087
+        ],
+        "u_interval": [
+          1654.5491819084286,
+          2136.9181089706112
+        ],
+        "b_interval": [
+          1654.5491819084286,
+          2872.5766060089236
+        ],
+        "c_interval": [
+          2076.9181089706112,
+          2752.5766060089236
+        ],
+        "queue": 0.0
+      }
+    },
+    {
+      "event": "SELECTED_BINDING_COMMITTED",
+      "attempt": 7,
+      "job": "P3",
+      "drone": "A-U1",
+      "battery": "A-B1",
+      "station": "A-C1",
+      "u_available": 2136.9181089706112,
+      "b_available": 2872.5766060089236,
+      "c_available": 2752.5766060089236
+    },
+    {
+      "event": "ORDER_COMPLETE",
+      "attempt": 7,
+      "objective": [
+        0,
+        2076.9181089706112,
+        1.8122573502002584,
+        2
+      ],
+      "input_unchanged": true
+    },
+    {
+      "event": "PRIORITY_ORDERS_GENERATED",
+      "orders": [
+        [
+          "P2",
+          "P1",
+          "P4",
+          "P3"
+        ],
+        [
+          "P2",
+          "P1",
+          "P4",
+          "P3"
+        ],
+        [
+          "P1",
+          "P2",
+          "P4",
+          "P3"
+        ]
+      ]
+    },
+    {
+      "event": "ORDER_START",
+      "attempt": 8,
+      "priority": [
+        "P2",
+        "P1",
+        "P4",
+        "P3"
+      ],
+      "snapshot_sha256": "f9ea04a9ba04ed5f94e825bfd2b5e0bc3f2489f2c4b021439f3a84500614c2f4",
+      "initial_u": {
+        "A-U1": 0.0,
+        "A-U2": 0.0,
+        "B-U1": 0.0
+      },
+      "initial_b": {
+        "A-B1": 1000000.0,
+        "A-B2": 1000000.0,
+        "B-B1": 1000000.0
+      },
+      "initial_c": {
+        "A-C1": 0.0,
+        "B-C1": 0.0
+      }
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 8,
+      "job": "P2",
+      "valid_bindings": 0
+    },
+    {
+      "event": "ORDER_ROLLBACK",
+      "attempt": 8,
+      "failed_job": "P2",
+      "discarded_jobs": 0,
+      "reasons": [
+        "READINESS_WINDOW: earliest=1000060.000000 upper=66.666667 battery=A-B1",
+        "READINESS_WINDOW: earliest=1000060.000000 upper=66.666667 battery=A-B2"
+      ],
+      "input_unchanged": true
+    },
+    {
+      "event": "ORDER_START",
+      "attempt": 9,
+      "priority": [
+        "P2",
+        "P1",
+        "P4",
+        "P3"
+      ],
+      "snapshot_sha256": "f9ea04a9ba04ed5f94e825bfd2b5e0bc3f2489f2c4b021439f3a84500614c2f4",
+      "initial_u": {
+        "A-U1": 0.0,
+        "A-U2": 0.0,
+        "B-U1": 0.0
+      },
+      "initial_b": {
+        "A-B1": 1000000.0,
+        "A-B2": 1000000.0,
+        "B-B1": 1000000.0
+      },
+      "initial_c": {
+        "A-C1": 0.0,
+        "B-C1": 0.0
+      }
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 9,
+      "job": "P2",
+      "valid_bindings": 0
+    },
+    {
+      "event": "ORDER_ROLLBACK",
+      "attempt": 9,
+      "failed_job": "P2",
+      "discarded_jobs": 0,
+      "reasons": [
+        "READINESS_WINDOW: earliest=1000060.000000 upper=66.666667 battery=A-B1",
+        "READINESS_WINDOW: earliest=1000060.000000 upper=66.666667 battery=A-B2"
+      ],
+      "input_unchanged": true
+    },
+    {
+      "event": "ORDER_START",
+      "attempt": 10,
+      "priority": [
+        "P1",
+        "P2",
+        "P4",
+        "P3"
+      ],
+      "snapshot_sha256": "f9ea04a9ba04ed5f94e825bfd2b5e0bc3f2489f2c4b021439f3a84500614c2f4",
+      "initial_u": {
+        "A-U1": 0.0,
+        "A-U2": 0.0,
+        "B-U1": 0.0
+      },
+      "initial_b": {
+        "A-B1": 1000000.0,
+        "A-B2": 1000000.0,
+        "B-B1": 1000000.0
+      },
+      "initial_c": {
+        "A-C1": 0.0,
+        "B-C1": 0.0
+      }
+    },
+    {
+      "event": "CANDIDATES_ENUMERATED",
+      "attempt": 10,
+      "job": "P1",
+      "valid_bindings": 0
+    },
+    {
+      "event": "ORDER_ROLLBACK",
+      "attempt": 10,
+      "failed_job": "P1",
+      "discarded_jobs": 0,
+      "reasons": [
+        "READINESS_WINDOW: earliest=1000060.000000 upper=200.000000 battery=A-B1",
+        "READINESS_WINDOW: earliest=1000060.000000 upper=200.000000 battery=A-B2"
+      ],
+      "input_unchanged": true
+    },
+    {
+      "event": "ALL_ATTEMPTED_ORDERS_FAILED",
+      "attempted": 3
+    }
+  ],
+  "post_charge_handling": {
+    "feasible": true,
+    "records": [
+      {
+        "job": "P2",
+        "type": "A",
+        "boxes": [
+          "K3"
+        ],
+        "order": [
+          "V3"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 686.6666666666666,
+        "energy": 1.2042087066060998,
+        "soc": 0.7323980651986445,
+        "charge_start": 686.6666666666666,
+        "charge_end": 1534.5491819084286,
+        "battery_full_ready": 1654.5491819084286,
+        "post_charge_delay": 120.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V3": 343.3333333333333
+        },
+        "arrival": {
+          "V3": 283.3333333333333
+        },
+        "selected_windows": {
+          "V3": [
+            60,
+            410
+          ]
+        },
+        "window_interval": [
+          -223.33333333333331,
+          66.66666666666669
+        ],
+        "u_interval": [
+          0.0,
+          746.6666666666666
+        ],
+        "b_interval": [
+          0.0,
+          1654.5491819084286
+        ],
+        "c_interval": [
+          686.6666666666666,
+          1534.5491819084286
+        ],
+        "queue": 0.0
+      },
+      {
+        "job": "P3",
+        "type": "A",
+        "boxes": [
+          "K4"
+        ],
+        "order": [
+          "V4"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 1654.5491819084286,
+        "takeoff": 1714.5491819084286,
+        "return": 2076.9181089706112,
+        "energy": 0.6080486435941586,
+        "soc": 0.8648780792012981,
+        "charge_start": 2076.9181089706112,
+        "charge_end": 2752.5766060089236,
+        "battery_full_ready": 2872.5766060089236,
+        "post_charge_delay": 120.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V4": 211.18446353109127
+        },
+        "arrival": {
+          "V4": 151.18446353109127
+        },
+        "selected_windows": {
+          "V4": [
+            60,
+            2600
+          ]
+        },
+        "window_interval": [
+          -91.18446353109127,
+          2388.8155364689087
+        ],
+        "u_interval": [
+          1654.5491819084286,
+          2136.9181089706112
+        ],
+        "b_interval": [
+          1654.5491819084286,
+          2872.5766060089236
+        ],
+        "c_interval": [
+          2076.9181089706112,
+          2752.5766060089236
+        ],
+        "queue": 0.0
+      }
+    ],
+    "objective": [
+      0,
+      2076.9181089706112,
+      1.8122573502002584,
+      2
+    ],
+    "priority": [
+      "P2",
+      "P3"
+    ]
+  },
+  "all_attempts_failed": {
+    "feasible": false,
+    "failure_kind": "THIS_EVALUATION_FOUND_NO_COMPLETE_SCHEDULE",
+    "failures": [
+      {
+        "feasible": false,
+        "failure_kind": "THIS_ORDER_FOUND_NO_COMPLETE_SCHEDULE",
+        "failed_job": "P2",
+        "reasons": [
+          "READINESS_WINDOW: earliest=1000060.000000 upper=66.666667 battery=A-B1",
+          "READINESS_WINDOW: earliest=1000060.000000 upper=66.666667 battery=A-B2"
+        ],
+        "partial": []
+      },
+      {
+        "feasible": false,
+        "failure_kind": "THIS_ORDER_FOUND_NO_COMPLETE_SCHEDULE",
+        "failed_job": "P2",
+        "reasons": [
+          "READINESS_WINDOW: earliest=1000060.000000 upper=66.666667 battery=A-B1",
+          "READINESS_WINDOW: earliest=1000060.000000 upper=66.666667 battery=A-B2"
+        ],
+        "partial": []
+      },
+      {
+        "feasible": false,
+        "failure_kind": "THIS_ORDER_FOUND_NO_COMPLETE_SCHEDULE",
+        "failed_job": "P1",
+        "reasons": [
+          "READINESS_WINDOW: earliest=1000060.000000 upper=200.000000 battery=A-B1",
+          "READINESS_WINDOW: earliest=1000060.000000 upper=200.000000 battery=A-B2"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  "neighbor_checks": {
+    "evaluated_candidates": 41,
+    "counts": {
+      "merge": 12,
+      "swap": 9,
+      "split": 1,
+      "change_type": 4,
+      "move": 15
+    },
+    "feasible_counts": {
+      "merge": 3,
+      "swap": 1,
+      "move": 4
+    },
+    "best_candidate_objective": [
+      0,
+      940.0,
+      4.093671428198352,
+      3
+    ],
+    "scope": "one-neighborhood synthetic mechanism check; not global optimization or port-performance study"
+  },
+  "station_curve_check": "passed",
+  "purpose": "Synthetic small-case mechanism checks, not real-port performance validation",
+  "inputs": {
+    "nodes": {
+      "O": [
+        0,
+        0,
+        0
+      ],
+      "V1": [
+        2000,
+        0,
+        20
+      ],
+      "V2": [
+        4000,
+        0,
+        20
+      ],
+      "V3": [
+        0,
+        3000,
+        20
+      ],
+      "V4": [
+        1000,
+        1000,
+        20
+      ],
+      "V5": [
+        -3000,
+        0,
+        20
+      ]
+    },
+    "models": {
+      "A": {
+        "m0": 70,
+        "capacity": 25,
+        "volume": 0.06,
+        "speed": 12,
+        "L0": 25000,
+        "LF": 20000,
+        "energy": 4.5,
+        "full_charge": 1800
+      },
+      "B": {
+        "m0": 65,
+        "capacity": 30,
+        "volume": 0.073,
+        "speed": 15,
+        "L0": 28000,
+        "LF": 16000,
+        "energy": 4.0,
+        "full_charge": 2400
+      }
+    },
+    "boxes": {
+      "K1": {
+        "ship": "V1",
+        "mass": 8,
+        "volume": 0.01,
+        "ready": 0,
+        "due": 460,
+        "hard": 460,
+        "weight": 1
+      },
+      "K2": {
+        "ship": "V2",
+        "mass": 6,
+        "volume": 0.01,
+        "ready": 0,
+        "due": 760,
+        "hard": 760,
+        "weight": 1
+      },
+      "K3": {
+        "ship": "V3",
+        "mass": 10,
+        "volume": 0.01,
+        "ready": 0,
+        "due": 410,
+        "hard": 410,
+        "weight": 1
+      },
+      "K4": {
+        "ship": "V4",
+        "mass": 5,
+        "volume": 0.01,
+        "ready": 0,
+        "due": 1860,
+        "hard": 1860,
+        "weight": 1
+      },
+      "K5": {
+        "ship": "V5",
+        "mass": 12,
+        "volume": 0.01,
+        "ready": 0,
+        "due": 660,
+        "hard": 660,
+        "weight": 1
+      }
+    },
+    "windows": {
+      "V1": [
+        [
+          60,
+          460
+        ]
+      ],
+      "V2": [
+        [
+          60,
+          760
+        ]
+      ],
+      "V3": [
+        [
+          60,
+          410
+        ]
+      ],
+      "V4": [
+        [
+          60,
+          1860
+        ]
+      ],
+      "V5": [
+        [
+          60,
+          660
+        ]
+      ]
+    },
+    "handover": 60.0,
+    "handover_power": 4.0,
+    "height": 60.0,
+    "up_speed": 3.0,
+    "down_speed": 3.0,
+    "efficiency": 0.72,
+    "gravity": 9.81,
+    "reserve": 0.2,
+    "prepare": 60.0,
+    "turn": 60.0,
+    "cool": 0.0,
+    "time_origin": 0.0,
+    "max_visits": 3,
+    "drones": {
+      "A-U1": "A",
+      "A-U2": "A",
+      "B-U1": "B"
+    },
+    "batteries": {
+      "A-B1": "A",
+      "A-B2": "A",
+      "B-B1": "B"
+    },
+    "stations": {
+      "A-C1": [
+        "A"
+      ],
+      "B-C1": [
+        "B"
+      ]
+    },
+    "initial_u": {},
+    "initial_b": {},
+    "initial_c": {}
+  },
+  "baseline": {
+    "feasible": true,
+    "records": [
+      {
+        "job": "P2",
+        "type": "A",
+        "boxes": [
+          "K3"
+        ],
+        "order": [
+          "V3"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 686.6666666666666,
+        "energy": 1.2042087066060998,
+        "soc": 0.7323980651986445,
+        "charge_start": 686.6666666666666,
+        "charge_end": 1534.5491819084286,
+        "battery_full_ready": 1534.5491819084286,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V3": 343.3333333333333
+        },
+        "arrival": {
+          "V3": 283.3333333333333
+        },
+        "selected_windows": {
+          "V3": [
+            60,
+            410
+          ]
+        },
+        "window_interval": [
+          -223.33333333333331,
+          66.66666666666669
+        ],
+        "u_interval": [
+          0.0,
+          746.6666666666666
+        ],
+        "b_interval": [
+          0.0,
+          1534.5491819084286
+        ],
+        "c_interval": [
+          686.6666666666666,
+          1534.5491819084286
+        ],
+        "queue": 0.0
+      },
+      {
+        "job": "P1",
+        "type": "A",
+        "boxes": [
+          "K1",
+          "K2"
+        ],
+        "order": [
+          "V1",
+          "V2"
+        ],
+        "drone": "A-U2",
+        "battery": "A-B2",
+        "station": "A-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 940.0,
+        "energy": 1.6561133446337557,
+        "soc": 0.6319748123036099,
+        "charge_start": 1534.5491819084286,
+        "charge_end": 2512.9819259137357,
+        "battery_full_ready": 2512.9819259137357,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V1": 260.0,
+          "V2": 513.3333333333334
+        },
+        "arrival": {
+          "V1": 200.0,
+          "V2": 453.33333333333337
+        },
+        "selected_windows": {
+          "V1": [
+            60,
+            460
+          ],
+          "V2": [
+            60,
+            760
+          ]
+        },
+        "window_interval": [
+          -140.0,
+          200.0
+        ],
+        "u_interval": [
+          0.0,
+          1000.0
+        ],
+        "b_interval": [
+          0.0,
+          2512.9819259137357
+        ],
+        "c_interval": [
+          1534.5491819084286,
+          2512.9819259137357
+        ],
+        "queue": 594.5491819084286
+      },
+      {
+        "job": "P4",
+        "type": "B",
+        "boxes": [
+          "K5"
+        ],
+        "order": [
+          "V5"
+        ],
+        "drone": "B-U1",
+        "battery": "B-B1",
+        "station": "B-C1",
+        "prepare_start": 0.0,
+        "takeoff": 60.0,
+        "return": 586.6666666666667,
+        "energy": 1.0032518764849772,
+        "soc": 0.7491870308787557,
+        "charge_start": 586.6666666666667,
+        "charge_end": 1688.0758131434902,
+        "battery_full_ready": 1688.0758131434902,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V5": 293.33333333333337
+        },
+        "arrival": {
+          "V5": 233.33333333333334
+        },
+        "selected_windows": {
+          "V5": [
+            60,
+            660
+          ]
+        },
+        "window_interval": [
+          -173.33333333333334,
+          366.66666666666663
+        ],
+        "u_interval": [
+          0.0,
+          646.6666666666667
+        ],
+        "b_interval": [
+          0.0,
+          1688.0758131434902
+        ],
+        "c_interval": [
+          586.6666666666667,
+          1688.0758131434902
+        ],
+        "queue": 0.0
+      },
+      {
+        "job": "P3",
+        "type": "A",
+        "boxes": [
+          "K4"
+        ],
+        "order": [
+          "V4"
+        ],
+        "drone": "A-U1",
+        "battery": "A-B1",
+        "station": "A-C1",
+        "prepare_start": 1534.5491819084286,
+        "takeoff": 1594.5491819084286,
+        "return": 1956.9181089706112,
+        "energy": 0.6080486435941586,
+        "soc": 0.8648780792012981,
+        "charge_start": 2512.9819259137357,
+        "charge_end": 3188.640422952048,
+        "battery_full_ready": 3188.640422952048,
+        "post_charge_delay": 0.0,
+        "window_choice_index": 0,
+        "completion": {
+          "V4": 211.18446353109127
+        },
+        "arrival": {
+          "V4": 151.18446353109127
+        },
+        "selected_windows": {
+          "V4": [
+            60,
+            1860
+          ]
+        },
+        "window_interval": [
+          -91.18446353109127,
+          1648.8155364689087
+        ],
+        "u_interval": [
+          1534.5491819084286,
+          2016.9181089706112
+        ],
+        "b_interval": [
+          1534.5491819084286,
+          3188.640422952048
+        ],
+        "c_interval": [
+          2512.9819259137357,
+          3188.640422952048
+        ],
+        "queue": 556.0638169431245
+      }
+    ],
+    "objective": [
+      0,
+      1956.9181089706112,
+      4.471622571318991,
+      4
+    ],
+    "priority": [
+      "P2",
+      "P1",
+      "P4",
+      "P3"
+    ]
+  },
+  "route_reversal": {
+    "same_distance": 8000.0,
+    "rejected": {
+      "feasible": false,
+      "failure_kind": "THIS_ORDER_FOUND_NO_COMPLETE_SCHEDULE",
+      "failed_job": "P1",
+      "reasons": [
+        "READINESS_WINDOW: earliest=1594.549182 upper=-220.000000 battery=A-B1",
+        "READINESS_WINDOW: earliest=60.000000 upper=-220.000000 battery=A-B2",
+        "READINESS_WINDOW: earliest=806.666667 upper=-220.000000 battery=A-B2"
+      ],
+      "partial": [
+        {
+          "job": "P2",
+          "type": "A",
+          "boxes": [
+            "K3"
+          ],
+          "order": [
+            "V3"
+          ],
+          "drone": "A-U1",
+          "battery": "A-B1",
+          "station": "A-C1",
+          "prepare_start": 0.0,
+          "takeoff": 60.0,
+          "return": 686.6666666666666,
+          "energy": 1.2042087066060998,
+          "soc": 0.7323980651986445,
+          "charge_start": 686.6666666666666,
+          "charge_end": 1534.5491819084286,
+          "battery_full_ready": 1534.5491819084286,
+          "post_charge_delay": 0.0,
+          "window_choice_index": 0,
+          "completion": {
+            "V3": 343.3333333333333
+          },
+          "arrival": {
+            "V3": 283.3333333333333
+          },
+          "selected_windows": {
+            "V3": [
+              60,
+              410
+            ]
+          },
+          "window_interval": [
+            -223.33333333333331,
+            66.66666666666669
+          ],
+          "u_interval": [
+            0.0,
+            746.6666666666666
+          ],
+          "b_interval": [
+            0.0,
+            1534.5491819084286
+          ],
+          "c_interval": [
+            686.6666666666666,
+            1534.5491819084286
+          ],
+          "queue": 0.0
+        }
+      ]
+    }
+  },
+  "battery_reuse": {
+    "drone_ready": 746.6666666666666,
+    "battery_full": 1534.5491819084286,
+    "next_takeoff": 1594.5491819084286,
+    "audit_rejects_tamper": "AUDIT_NOT_READY"
+  },
+  "finite_station": {
+    "separate_stations": {
+      "feasible": true,
+      "records": [
+        {
+          "job": "P4",
+          "type": "B",
+          "boxes": [
+            "K5"
+          ],
+          "order": [
+            "V5"
+          ],
+          "drone": "B-U1",
+          "battery": "B-B1",
+          "station": "B-C1",
+          "prepare_start": 0.0,
+          "takeoff": 60.0,
+          "return": 586.6666666666667,
+          "energy": 1.0032518764849772,
+          "soc": 0.7491870308787557,
+          "charge_start": 586.6666666666667,
+          "charge_end": 1688.0758131434902,
+          "battery_full_ready": 1688.0758131434902,
+          "post_charge_delay": 0.0,
+          "window_choice_index": 0,
+          "completion": {
+            "V5": 293.33333333333337
+          },
+          "arrival": {
+            "V5": 233.33333333333334
+          },
+          "selected_windows": {
+            "V5": [
+              60,
+              660
+            ]
+          },
+          "window_interval": [
+            -173.33333333333334,
+            366.66666666666663
+          ],
+          "u_interval": [
+            0.0,
+            646.6666666666667
+          ],
+          "b_interval": [
+            0.0,
+            1688.0758131434902
+          ],
+          "c_interval": [
+            586.6666666666667,
+            1688.0758131434902
+          ],
+          "queue": 0.0
+        },
+        {
+          "job": "P2",
+          "type": "A",
+          "boxes": [
+            "K3"
+          ],
+          "order": [
+            "V3"
+          ],
+          "drone": "A-U1",
+          "battery": "A-B1",
+          "station": "A-C1",
+          "prepare_start": 0.0,
+          "takeoff": 60.0,
+          "return": 686.6666666666666,
+          "energy": 1.2042087066060998,
+          "soc": 0.7323980651986445,
+          "charge_start": 686.6666666666666,
+          "charge_end": 1534.5491819084286,
+          "battery_full_ready": 1534.5491819084286,
+          "post_charge_delay": 0.0,
+          "window_choice_index": 0,
+          "completion": {
+            "V3": 343.3333333333333
+          },
+          "arrival": {
+            "V3": 283.3333333333333
+          },
+          "selected_windows": {
+            "V3": [
+              60,
+              410
+            ]
+          },
+          "window_interval": [
+            -223.33333333333331,
+            66.66666666666669
+          ],
+          "u_interval": [
+            0.0,
+            746.6666666666666
+          ],
+          "b_interval": [
+            0.0,
+            1534.5491819084286
+          ],
+          "c_interval": [
+            686.6666666666666,
+            1534.5491819084286
+          ],
+          "queue": 0.0
+        },
+        {
+          "job": "P3",
+          "type": "A",
+          "boxes": [
+            "K4"
+          ],
+          "order": [
+            "V4"
+          ],
+          "drone": "A-U1",
+          "battery": "A-B1",
+          "station": "A-C1",
+          "prepare_start": 1534.5491819084286,
+          "takeoff": 1594.5491819084286,
+          "return": 1956.9181089706112,
+          "energy": 0.6080486435941586,
+          "soc": 0.8648780792012981,
+          "charge_start": 1956.9181089706112,
+          "charge_end": 2632.5766060089236,
+          "battery_full_ready": 2632.5766060089236,
+          "post_charge_delay": 0.0,
+          "window_choice_index": 0,
+          "completion": {
+            "V4": 211.18446353109127
+          },
+          "arrival": {
+            "V4": 151.18446353109127
+          },
+          "selected_windows": {
+            "V4": [
+              60,
+              1860
+            ]
+          },
+          "window_interval": [
+            -91.18446353109127,
+            1648.8155364689087
+          ],
+          "u_interval": [
+            1534.5491819084286,
+            2016.9181089706112
+          ],
+          "b_interval": [
+            1534.5491819084286,
+            2632.5766060089236
+          ],
+          "c_interval": [
+            1956.9181089706112,
+            2632.5766060089236
+          ],
+          "queue": 0.0
+        }
+      ],
+      "objective": [
+        0,
+        1956.9181089706112,
+        2.8155092266852355,
+        3
+      ],
+      "priority": [
+        "P4",
+        "P2",
+        "P3"
+      ]
+    },
+    "shared_station_rejected_order": {
+      "feasible": false,
+      "failure_kind": "THIS_ORDER_FOUND_NO_COMPLETE_SCHEDULE",
+      "failed_job": "P3",
+      "reasons": [
+        "READINESS_WINDOW: earliest=2595.958328 upper=1648.815536 battery=A-B1"
+      ],
+      "partial": [
+        {
+          "job": "P4",
+          "type": "B",
+          "boxes": [
+            "K5"
+          ],
+          "order": [
+            "V5"
+          ],
+          "drone": "B-U1",
+          "battery": "B-B1",
+          "station": "SHARED-C1",
+          "prepare_start": 0.0,
+          "takeoff": 60.0,
+          "return": 586.6666666666667,
+          "energy": 1.0032518764849772,
+          "soc": 0.7491870308787557,
+          "charge_start": 586.6666666666667,
+          "charge_end": 1688.0758131434902,
+          "battery_full_ready": 1688.0758131434902,
+          "post_charge_delay": 0.0,
+          "window_choice_index": 0,
+          "completion": {
+            "V5": 293.33333333333337
+          },
+          "arrival": {
+            "V5": 233.33333333333334
+          },
+          "selected_windows": {
+            "V5": [
+              60,
+              660
+            ]
+          },
+          "window_interval": [
+            -173.33333333333334,
+            366.66666666666663
+          ],
+          "u_interval": [
+            0.0,
+            646.6666666666667
+          ],
+          "b_interval": [
+            0.0,
+            1688.0758131434902
+          ],
+          "c_interval": [
+            586.6666666666667,
+            1688.0758131434902
+          ],
+          "queue": 0.0
+        },
+        {
+          "job": "P2",
+          "type": "A",
+          "boxes": [
+            "K3"
+          ],
+          "order": [
+            "V3"
+          ],
+          "drone": "A-U1",
+          "battery": "A-B1",
+          "station": "SHARED-C1",
+          "prepare_start": 0.0,
+          "takeoff": 60.0,
+          "return": 686.6666666666666,
+          "energy": 1.2042087066060998,
+          "soc": 0.7323980651986445,
+          "charge_start": 1688.0758131434902,
+          "charge_end": 2535.9583283852526,
+          "battery_full_ready": 2535.9583283852526,
+          "post_charge_delay": 0.0,
+          "window_choice_index": 0,
+          "completion": {
+            "V3": 343.3333333333333
+          },
+          "arrival": {
+            "V3": 283.3333333333333
+          },
+          "selected_windows": {
+            "V3": [
+              60,
+              410
+            ]
+          },
+          "window_interval": [
+            -223.33333333333331,
+            66.66666666666669
+          ],
+          "u_interval": [
+            0.0,
+            746.6666666666666
+          ],
+          "b_interval": [
+            0.0,
+            2535.9583283852526
+          ],
+          "c_interval": [
+            1688.0758131434902,
+            2535.9583283852526
+          ],
+          "queue": 1001.4091464768236
+        }
+      ]
+    },
+    "shared_station_reordered_feasible": {
+      "feasible": true,
+      "records": [
+        {
+          "job": "P2",
+          "type": "A",
+          "boxes": [
+            "K3"
+          ],
+          "order": [
+            "V3"
+          ],
+          "drone": "A-U1",
+          "battery": "A-B1",
+          "station": "SHARED-C1",
+          "prepare_start": 0.0,
+          "takeoff": 60.0,
+          "return": 686.6666666666666,
+          "energy": 1.2042087066060998,
+          "soc": 0.7323980651986445,
+          "charge_start": 686.6666666666666,
+          "charge_end": 1534.5491819084286,
+          "battery_full_ready": 1534.5491819084286,
+          "post_charge_delay": 0.0,
+          "window_choice_index": 0,
+          "completion": {
+            "V3": 343.3333333333333
+          },
+          "arrival": {
+            "V3": 283.3333333333333
+          },
+          "selected_windows": {
+            "V3": [
+              60,
+              410
+            ]
+          },
+          "window_interval": [
+            -223.33333333333331,
+            66.66666666666669
+          ],
+          "u_interval": [
+            0.0,
+            746.6666666666666
+          ],
+          "b_interval": [
+            0.0,
+            1534.5491819084286
+          ],
+          "c_interval": [
+            686.6666666666666,
+            1534.5491819084286
+          ],
+          "queue": 0.0
+        },
+        {
+          "job": "P4",
+          "type": "B",
+          "boxes": [
+            "K5"
+          ],
+          "order": [
+            "V5"
+          ],
+          "drone": "B-U1",
+          "battery": "B-B1",
+          "station": "SHARED-C1",
+          "prepare_start": 0.0,
+          "takeoff": 60.0,
+          "return": 586.6666666666667,
+          "energy": 1.0032518764849772,
+          "soc": 0.7491870308787557,
+          "charge_start": 1534.5491819084286,
+          "charge_end": 2635.958328385252,
+          "battery_full_ready": 2635.958328385252,
+          "post_charge_delay": 0.0,
+          "window_choice_index": 0,
+          "completion": {
+            "V5": 293.33333333333337
+          },
+          "arrival": {
+            "V5": 233.33333333333334
+          },
+          "selected_windows": {
+            "V5": [
+              60,
+              660
+            ]
+          },
+          "window_interval": [
+            -173.33333333333334,
+            366.66666666666663
+          ],
+          "u_interval": [
+            0.0,
+            646.6666666666667
+          ],
+          "b_interval": [
+            0.0,
+            2635.958328385252
+          ],
+          "c_interval": [
+            1534.5491819084286,
+            2635.958328385252
+          ],
+          "queue": 947.8825152417619
+        },
+        {
+          "job": "P3",
+          "type": "A",
+          "boxes": [
+            "K4"
+          ],
+          "order": [
+            "V4"
+          ],
+          "drone": "A-U1",
+          "battery": "A-B1",
+          "station": "SHARED-C1",
+          "prepare_start": 1534.5491819084286,
+          "takeoff": 1594.5491819084286,
+          "return": 1956.9181089706112,
+          "energy": 0.6080486435941586,
+          "soc": 0.8648780792012981,
+          "charge_start": 2635.958328385252,
+          "charge_end": 3311.6168254235645,
+          "battery_full_ready": 3311.6168254235645,
+          "post_charge_delay": 0.0,
+          "window_choice_index": 0,
+          "completion": {
+            "V4": 211.18446353109127
+          },
+          "arrival": {
+            "V4": 151.18446353109127
+          },
+          "selected_windows": {
+            "V4": [
+              60,
+              1860
+            ]
+          },
+          "window_interval": [
+            -91.18446353109127,
+            1648.8155364689087
+          ],
+          "u_interval": [
+            1534.5491819084286,
+            2016.9181089706112
+          ],
+          "b_interval": [
+            1534.5491819084286,
+            3311.6168254235645
+          ],
+          "c_interval": [
+            2635.958328385252,
+            3311.6168254235645
+          ],
+          "queue": 679.0402194146409
+        }
+      ],
+      "objective": [
+        0,
+        1956.9181089706112,
+        2.8155092266852355,
+        3
+      ],
+      "priority": [
+        "P2",
+        "P4",
+        "P3"
+      ]
+    }
+  },
+  "snapshot_repeatability": "passed",
+  "multiple_disjoint_windows": "passed",
+  "scope": "Full candidate timeline and three mechanisms checked; no broad optimization performance claim"
+}

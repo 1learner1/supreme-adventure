@@ -1,0 +1,38 @@
+flowchart TB
+input["输入架次集合<br/>及共同快照"]
+physical["R1 重算载荷能耗<br/>及可起飞区间"]
+copy["R2 选取排程顺序<br/>建立全新副本"]
+job["取该顺序下一架次"]
+enum["R2—R3 临时枚举<br/>完整设备组合"]
+has["存在合格组合？"]
+select["按比较键<br/>选定唯一组合"]
+commit["仅提交所选组合<br/>占用及可用时刻"]
+more["还有未排架次？"]
+check["R4 检查全部交付<br/>及资源约束"]
+valid["完整排程通过？"]
+save["保存完整可行排程<br/>及评价向量"]
+rollback["丢弃本顺序<br/>全部状态与记录"]
+next["还有未试排程顺序？"]
+any["存在完整可行排程？"]
+return["返回较优完整方案<br/>及绑定预约"]
+failed["返回本次排程<br/>未找到可行方案"]
+input --> physical
+physical --> copy
+copy --> job
+job --> enum
+enum --> has
+has -->|是| select
+has -->|否| rollback
+select --> commit
+commit --> more
+more -->|是| job
+more -->|否| check
+check --> valid
+valid -->|是| save
+valid -->|否| rollback
+save --> next
+rollback --> next
+next -->|是| copy
+next -->|否| any
+any -->|是| return
+any -->|否| failed

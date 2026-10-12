@@ -1,24 +1,30 @@
 # 港口锚地无人机协同调度专利稿
 
 
-## 最新聚焦版：2026年10月12日
+## 最新纠正版：2026年10月12日
 
-本轮以“每次调整任务或访问顺序，都完整重排周转时间轴并判断可执行性”为主线，将船舶窗口及有限工位作为海事新增设计单独说明。
+沿用“任务调整后完整重排机体、电池和工位时间轴”的主线，补齐实施细节与可追溯证据。
 
-- [完整Word审阅稿](port-dispatch_20261012105818.docx)及[Markdown正文](port-dispatch_20261012105818.md)。
-- [权利要求书](port-dispatch_20261012105818-claims.docx)及[说明书](port-dispatch_20261012105818-specification.docx)。
-- [本轮修改、来源边界及验证说明](port-dispatch_20261012105818-revision-notes.md)。
-- [机制检查结果](port-dispatch_20261012105818-checks.json)及[可重复原型](port-dispatch_20261012105818-scheduler.py)。
-- [来源与权项映射](port-dispatch_20261012105818-evidence.json)、[结构化稿](port-dispatch_20261012105818-draft.json)、[检查报告](port-dispatch_20261012105818-validation.txt)。
-- [海事扩展查新状态](port-dispatch_20261012105818-prior-art-status.md)。
+- [完整Word审阅稿](port-dispatch_20261012113350.docx)及[Markdown正文](port-dispatch_20261012113350.md)。
+- [权利要求书](port-dispatch_20261012113350-claims.docx)、[说明书](port-dispatch_20261012113350-specification.docx)、[摘要](port-dispatch_20261012113350-abstract.docx)。
+- [独立审核材料Word](port-dispatch_20261012113350-review.docx)及[来源、公式、代码和运行证据索引](port-dispatch_20261012113350-source-index.md)。
+- [可重复原型](port-dispatch_20261012113350-scheduler.py)、[测试输入和完整资源记录](port-dispatch_20261012113350-checks.json)、[真实运行日志](port-dispatch_20261012113350-run-log.txt)、[选择提交与回滚事件](port-dispatch_20261012113350-trace.jsonl)。
+- [结构化稿](port-dispatch_20261012113350-draft.json)、[证据映射](port-dispatch_20261012113350-evidence.json)、[原论文技术摘录及公式XML](port-dispatch_20261012113350-source-excerpts.json)。
+- [结构与溯源检查](port-dispatch_20261012113350-validation.txt)、[交付检查](port-dispatch_20261012113350-delivery-checks.json)、[本轮修订说明](port-dispatch_20261012113350-revision-notes.md)。
 
-说明书为9项方法权利要求的对应技术披露，包含13个可编辑公式和3张中文黑白附图。人工5船小例验证三个机制以及41个邻域候选的完整重排；这不等于已完成真实港口仿真、实飞或新颖性判断。原论文山区结果与本轮海事新增设计没有混用。
+本轮区分拆卸冷却完成、充电结束与满电再次可用；明确排序键、设备组合比较、状态提交和失败回滚。说明书含15个显示公式、可编辑行内上下标、3张带循环或反馈关系的中文附图和6个实施例。审核材料表格设置重复表头及禁止拆行。
 
-从仓库根目录重复示例检查：
+已实际执行并重复运行代码。旧版基准、反向访问和共享工位结果保持一致，新增120秒工位外处理延迟的电池复用检查。人工5船及41个邻域候选检查不代表真实港口仿真、实飞或新颖性结论。
+
+从仓库根目录运行（仅需Python标准库）：
 
 ```bash
-python3 docs/patents/port-anchor-drone-dispatch/port-dispatch_20261012105818-scheduler.py --output /tmp/port-mechanism-checks.json
+python3 docs/patents/port-anchor-drone-dispatch/port-dispatch_20261012113350-scheduler.py --output /tmp/port-checks.json --trace-output /tmp/port-trace.jsonl
 ```
+
+### 上一聚焦版（保留）
+
+[port-dispatch_20261012105818.docx](port-dispatch_20261012105818.docx)及[对应Markdown](port-dispatch_20261012105818.md)。
 
 ## 此前版本（保留）
 
